@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <title>ARGANS | Detecting & Monitoring Marine Plastics from Space</title>
+    </head>
+    <body>
+        <section id="landing">
+            <div class="logo">
+                <img class="img-fluid" src="../img/argans_white.png" alt="ARGANS company logo"/>
+            </div>
+            <div class="title">
+                <h1 class="display-1">Monitoring Marine Plastics from Space</h1>
+            </div>
+            <div class="sentinel">
+                <img class="img-fluid" src="../img/sentinel-2.png" alt="Sentinel-2 satellite"/>
+            </div>
+            <div class="wave" id="wave1" style="--i:1;"></div>
+            <div class="wave" id="wave2" style="--i:2;"></div>
+            <div class="wave" id="wave3" style="--i:3;"></div>
+            <div class="wave" id="wave4" style="--i:4;"></div>
+        </section>
+
+        <section id="unep">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <p>Since 2000 the global production of plastic has risen from 200 to 380 million metric tons</p>
+                        <p class="mt-5">By 2040 the volume of plastic flowing into marine areas is forecast to triple, adding 27-37 million metric tons of plastic per annum <cite>&dash; UNEP 2021</cite></p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="plastic_mat">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <p>Plastics accumulate in floating mats of debris along ocean fronts and are visual testimony to the scale of problem</p>
+                    </div>
+                </div>
+                <p id="credit_power">Photo by Caroline Power, @carolinepower/photography</p>
+            </div>
+        </section>
+
+        <section id="plastic_soup">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 px-3">
+                        <p>90% of marine plastic is less than 5mm in size. These microplastics aggregate within oceanic gyres to form a non-biodegradable toxic 'plastic soup' that enters the aquatic food chain with detrimental consequences to biodiversity and human health</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plastic_bottle">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 px-3">
+                        <p>Earth Observation (EO) satellite remote sensing provides the means to observe phenomena at the global scale and the challenge is to develop algorithms and sensors optimized to the role of detecting and monitoring marine plastics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="program_intro">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="MLlogo" class="col-lg-4">
+                        <img class="img-fluid" src="../img/MarineLitterLogo.png" alt="Marine Litter from Space logo"/>
+                    </div>
+                    <div class="col-lg-8 mt-5 px-5">
+                        <h1>ARGANS Marine Litter Program</h1>
+                        <p class="mt-3">Since 2017 ARGANS has been commissioned by the European Space Agency and European Commission to undertake R&amp;D projects to develop methods &amp; techniques for detecting and monitoring marine plastics and applying these techniques to case studies in the North Eastern Atlantic, the Mediterranean, and the Black Sea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="container-fluid outer">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1>RESMALI</h1>
+                        <h2>Feasibility of Plastic Detection from Space</h2>
+                        <div class="content mt-5">
+                            <p>Marine optical remote sensing uses radiometers to measure the spectral variations in water-leaving radiance (or reflectance), which is the sunlight backscattered out of the ocean after interaction with water and its constituents. Natural constituents are phytoplankton chlorophyll, coloured dissolved organic matter (CDOM) and suspended sediment. Each have characteristic optical properties, absorbing selective wavelengths of light, and so create distinct spectral signatures. Algorithms are used to infer concentrations of these contituents based on measuring the top-of-atmosphere (TOA) signal, already only 10% of the total light received by the sensor and further attenuated by the optical properties of the atmosphere.</p>
+                            <p>Marine plastics, absorb and scatter light according to characteristic optical properties due to the polymers and dyes used in manufacture and, in principle, a distinct spectral signature could be detected by remote sensing radiometers.</p>
+                            <p>Under the General Studies Programme (GSP), the European Space Agency (ESA) initiated in 2017 the project 'Remote Sensing of Marine Litter' by funding two parallel contracts - RESMALI, led by Argans Limited, UK (team including: the University of Cadiz, Airbus and The Ocean Cleanup) and OPTIMAL, led by the Plymouth Marine Laboratory, UK.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content">
+
+                            <p>The Ocean Cleanup contributed a comprehensive <abbr title="Short Wave Infrared">SWIR</abbr> spectral signature library for oceanic plastics, acquired for different concentrations and kinds of plastics in varying stages of degradation, some collected from Pacific &amp; Atlantic garbage patches and frozen to preserve the biofilm that builds up over time and also contributes to the spectral signature.</p>
+                            <div class="img-div">
+                                <img class="img-fluid" src="../img/plasticSpectra.png" alt="spectral signature of differing plastics">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eotrack_med"></section>
+        <section id="wasp"></section>
+        <section id="bsplastic"></section>
+        <section id="littertep"></section>
+
+        <section id="mlopsi">
+            <div class="row">
+                <div class="col">
+                    <h1>The Marine Litter Program</h1>
+                    <p class="mt-5">By providing a modelling &amp; simulation framework enabling researchers to build virtual experiments by combining pre-built, re-useable, building blocks within a low-code environment and thus, by democratization, reduce the barriers to entry for using the various sophisticated computational techniques available for investigating and understanding complex systems, like monitoring marine plastic from satellite.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="future"></section>
+
+        <script>
+            let wave1 = document.getElementById('wave1');
+            let wave2 = document.getElementById('wave2');
+            let wave3 = document.getElementById('wave3');
+            let wave4 = document.getElementById('wave4');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                wave1.style.backgroundPositionX = 300 + value * 2 + 'px';
+                wave2.style.backgroundPositionX = 400 + value * -2 + 'px';
+                wave3.style.backgroundPositionX = 200 + value * 0.5 + 'px';
+                wave4.style.backgroundPositionX = 100 + value * -0.5 + 'px';
+            })
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    </body>
+</html>

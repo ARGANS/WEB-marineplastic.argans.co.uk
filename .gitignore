@@ -1,0 +1,32 @@
+# ignore files starting with . or ~
+.*
+~*
+
+# ignore HTML theme
+vendor/
+vendor
+
+# ignore MacOS junk
+.DS_Store
+Thumbs.db
+
+# ignore application files
+.vscode/
+*.code-workspace
+.history/
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore logfiles
+*.log
+
+# track these files, if they exist
+!.gitignore

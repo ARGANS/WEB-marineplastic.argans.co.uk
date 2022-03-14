@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* ICONS & TYPOGRAPHY */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3vmax;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+strong {
+    font-weight: 700;
+}
+
+/* LANDING SECTION */
+section#landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/floating_plastic01.png),
+        -moz-linear-gradient(top, black, rgb(0,192,255,0.25));
+    background-image: url(../img/floating_plastic01.png),
+        -webkit-linear-gradient(black, rgb(0,192,255,0.25));
+    background-image: linear-gradient(to bottom, rgb(1,1,1,1) 15%, rgb(0,192,255,0.25)),
+        url(../img/floating_plastic01.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom;
+    background-size: 100%, 100%;
+    overflow: hidden;
+}
+.logo {
+    position: relative;
+    z-index: 50;
+    width: 33vh;
+    padding: 50px;
+}
+.title {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    z-index: 100;
+    width: 100%;
+    top: 250px;
+    padding: 50px;
+    color: #fff;
+    font-family: 'Comfortaa' cursive;
+}
+.sentinel {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    z-index: 10;
+    top: 100px;
+    right: 10px;
+    animation: orbit 6s;
+    animation-direction: alternate;
+}
+@keyframes orbit {
+    100% {
+      transform: translate(0, 0) scale(1,1);
+    }
+    0% {
+      transform: translate(-500%, 100%) scale(0.1,0.1) rotate(-50deg);
+    }
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url(../img/wave02.png);
+    background-size: 1000px 200px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 800px;
+}
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 400px;
+}
+.wave#wave3 {
+    z-index: 998;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    background-position-x: 100px;
+}
+@keyframes animate {
+    0%,100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* UNEP */
+section#unep {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-image: linear-gradient(black, rgb(0,192,255));
+    background-attachment: fixed;
+}
+#unep p {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vmax;
+}
+
+
+/* GARBAGE PATCH */
+section#plastic_mat {
+    position: relative;
+}
+section#plastic_mat:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+    z-index: -10;
+    background-image: url(../img/floating_plastic02.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+#plastic_mat div {
+    position: relative;
+    padding-top: 125px;
+    padding-bottom: 125px;
+    color: #111;
+    opacity: 1;
+    text-align: center;
+    font-family: 'Comfortaa' cursive;
+    font-size: 2.5vmax;
+}
+#credit_power {
+    position: absolute;
+    bottom: 10px;
+    border-left: 100px;
+    opacity: 1;
+    color: #fff;
+    font-size: small;
+}
+
+/* PLASTIC SOUP */
+section#plastic_soup {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-image: linear-gradient(black, rgb(0,192,255));
+    background-attachment: fixed;
+}
+#plastic_soup p {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vmax;
+}
+
+/* PLASTIC BOTTLE */
+section#plastic_bottle {
+    position: relative;
+}
+section#plastic_bottle:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    z-index: -5;
+    background-image: url(../img/floating_plastic01.png);
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+#plastic_bottle div {
+    position: relative;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #111;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vmax;
+}
+
+/* PLASTIC SPACE */
+section#program_intro {
+    position: relative;
+}
+section#program_intro:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: linear-gradient(black, rgb(0,192,255));
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+#program_intro div {
+    position: relative;
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vmax;
+}
+#MLlogo {
+    position: relative;
+    top: 0;
+    max-width: fit-content;
+    z-index: 50;
+}
+
+/* PORTFOLIO */
+.wrapper {
+    display: flex;
+    padding: 3vmax;
+    z-index: 1;
+    text-align: justify;
+    background-image: linear-gradient(black, rgb(0,192,255));
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+.wrapper h1 {
+    color: #006d77;
+}
+.wrapper h2 {
+    font-variant-caps: small-caps;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #341c1c;
+}
+.img-div {
+    text-align: center;
+}
+.outer {
+    position: relative;
+    background: #a8e9ff;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2ch;
+    padding-right: 2ch;
+    font-size: 1.5vmax;
+}
+/* RESMALI */
+section#resmali {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    background: #050505;
+    overflow: hidden;
+}
+
+section#eotrack_med {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #341c1c;
+    overflow: hidden;
+}
+
+section#wasp {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #2c497f;
+    overflow: hidden;
+}
+
+section#bsplastic {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #3d2b56;
+    overflow: hidden;
+}
+
+section#littertep {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #ffdfd3;
+    overflow: hidden;
+}
+
+section#mlopsi {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #c7e885;
+    overflow: hidden;
+}
+
+section#future {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(black, rgb(0,192,255));
+    overflow: hidden;
+}
+.sec {
+    padding: 100px;
+}
+.sec h2 {
+    font-size: 3em;
+    color: #111;
+}
+.sec p {
+    font-size: 1.2 em;
+    color: #111;
+}
