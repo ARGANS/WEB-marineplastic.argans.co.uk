@@ -306,7 +306,6 @@ section#program_intro:before {
     display: flex;
     padding: 3vmax;
     z-index: 1;
-    text-align: justify;
     background-image: linear-gradient(black, rgb(0,192,255));
     background-repeat: repeat-x;
     background-position: center center;
@@ -340,7 +339,8 @@ section#program_intro:before {
     flex-direction: column;
     padding-left: 2ch;
     padding-right: 2ch;
-    font-size: 1.5vmax;
+    text-align: left;
+    font-size: 1.25vmax;
 }
 /* RESMALI */
 section#resmali {
