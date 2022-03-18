@@ -369,76 +369,46 @@ section#program_intro:before {
 .content {
     display: flex;
     flex-direction: column;
-    padding-left: 2ch;
-    padding-right: 2ch;
-    text-align: left;
+    padding-left: 5ch;
+    padding-right: 5ch;
+    text-align: justify;
     font-size: 1.25vmax;
 }
-/* RESMALI */
-section#resmali {
+/* FOOTER */
+section#footer {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 33vh;
     padding: 50px;
     background: #050505;
     overflow: hidden;
 }
 
-section#eotrack_med {
+/* NAVBAR */
+nav {
     position: relative;
     width: 100%;
-    height: 50vh;
-    background: #341c1c;
-    overflow: hidden;
+    height: 5vh;
+    background: #222;
 }
-
-section#wasp {
-    position: relative;
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+.item {
+    order: 3;
     width: 100%;
-    height: 50vh;
-    background: #2c497f;
-    overflow: hidden;
-}
-
-section#bsplastic {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background: #3d2b56;
-    overflow: hidden;
-}
-
-section#littertep {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background: #ffdfd3;
-    overflow: hidden;
-}
-
-section#mlopsi {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background: #c7e885;
-    overflow: hidden;
-}
-
-section#future {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background-image: linear-gradient(black, rgb(0,192,255));
-    overflow: hidden;
-}
-.sec {
-    padding: 100px;
-}
-.sec h2 {
-    font-size: 3em;
-    color: #111;
-}
-.sec p {
-    font-size: 1.2 em;
-    color: #111;
+    text-align: center;
+    display: block;
 }
