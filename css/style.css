@@ -1,63 +1,30 @@
 * {
     box-sizing: border-box;
-}
-html, body {
     margin: 0;
     padding: 0;
+}
+html, body {
     /*height: 100vh;*/
     min-height: 100vh;
     min-height: -webkit-fill-available;
 }
 
-/* ICONS & TYPOGRAPHY */
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
-/* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
 h1 {
-    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 3vmax;
 }
 p {
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vmax;
 }
 strong {
     font-weight: 700;
 }
 a {
     outline: none;
+    color: inherit;
     text-decoration: none;
     padding: 2px 1px 0;
   }
@@ -91,19 +58,13 @@ a {
     background-size: contain;
     display: inline-block;
   }
+
 /* LANDING SECTION */
 section#landing {
     position: relative;
     width: 100%;
     height: 100vh;
-/*     background-image: url(../img/floating_plastic01.png),
-        -moz-linear-gradient(top, black, rgb(0,192,255,0.25));
-    background-image: url(../img/floating_plastic01.png),
-        -webkit-linear-gradient(black, rgb(0,192,255,0.25));
-    background-image: linear-gradient(to bottom, rgb(1,1,1,1) 15%, rgb(0,192,255,0.25)),
-        url(../img/floating_plastic01.png); */
     background-image: linear-gradient(black, rgb(0,192,255));
-    background-repeat: no-repeat, no-repeat;
     background-position: bottom;
     background-size: 100%, 100%;
     overflow: hidden;
@@ -123,7 +84,7 @@ section#landing {
     width: 100%;
     top: 50%;
     padding-left: 5%;
-    padding-right: 5px;
+    padding-right: 5%;
     color: #fff;
     font-family: 'Comfortaa', sans-serif;
 }
@@ -187,8 +148,7 @@ section#landing {
     }
 }
 
-/* UNEP */
-section#unep {
+section.intro {
     position: relative;
     width: 100%;
     text-align: center;
@@ -196,101 +156,16 @@ section#unep {
     align-content: center;
     padding-top: 250px;
     padding-bottom: 250px;
-    /*background-image: linear-gradient(black, rgb(0,192,255));*/
-    background-color: rgb(148,55,77);
-    background-attachment: fixed;
-}
-#unep p {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5vmax;
-}
-
-/* PLASTIC SOUP */
-section#plastic_soup {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    padding-top: 250px;
-    padding-bottom: 250px;
-    background-image: linear-gradient(black, rgb(0,192,255));
-    background-attachment: fixed;
-}
-#plastic_soup p {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5vmax;
-}
-
-/* PLASTIC BOTTLE */
-section#plastic_bottle {
-    position: relative;
-}
-section#plastic_bottle:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    opacity: 1;
-    z-index: -5;
-    /* background-image: url(../img/floating_plastic01.png); */
-    background-color: rgb(221,164,72);
-    background-repeat: repeat-x;
-    background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    overflow: hidden;
 }
-#plastic_bottle div {
-    position: relative;
-    display: flex;
-    text-align: justify;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: #111;
-    opacity: 1;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5vmax;
+section.sunset {
+    background-image: linear-gradient(rgb(221,164,72), rgb(148,55,77));
+}
+section.ocean {
+    background-image: linear-gradient(black, rgb(0,192,255));
 }
 
-/* PLASTIC SPACE */
-section#program_intro {
-    position: relative;
-}
-section#program_intro:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    background-image: linear-gradient(black, rgb(0,192,255));
-    background-repeat: repeat-x;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: hidden;
-}
-#program_intro div {
-    position: relative;
-    text-align: justify;
-    justify-content: center;
-    align-content: center;
-    color: #fff;
-    opacity: 1;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2vmax;
-}
 #MLlogo {
     position: relative;
     top: 0;
@@ -318,6 +193,10 @@ section#program_intro:before {
     letter-spacing: 0.1em;
     text-align: left;
     color: #341c1c;
+}
+.wrapper p {
+    color: #111;
+    font-size: 1vmax;
 }
 .img-div {
     text-align: center;
@@ -350,30 +229,72 @@ section#footer {
 }
 
 /* NAVBAR */
-nav {
-    position: relative;
-    width: 100%;
-    height: 5vh;
-    background: #222;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-}
-.menu {
+.navbar {
+    /* make it stick */
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* in front of all other elements */
+    z-index: 99;
+    /* set background */
+    background-color: white;
+    padding: 10px 5%;
+
+    /* define flex */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.logo-image {
+    display: block;
+    height: 48px
+}
+.nav-menu {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+    list-style-image: none;
 }
-.menu li a {
-    display: block;
-    padding: 15px 5px;
+.menu-item {
+    display: inline-block;
+    margin-left: 10px;
 }
-.item {
-    order: 3;
-    width: 100%;
-    text-align: center;
-    display: block;
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin: 4px auto;
+}
+.menu-icon {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .logo-container {
+        width: 100%;
+    }
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+    .active {
+        display: block;
+    }
+    .menu-item {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        text-align: end;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 5%;
+    }
+    .menu-icon:hover .bar {
+        background-color: darkcyan;
+    }
 }
