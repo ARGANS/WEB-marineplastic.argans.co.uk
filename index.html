@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
 
         <title>ARGANS | Detecting & Monitoring Marine Plastics from Space</title>
     </head>
     <body>
         <section id="landing">
             <div class="logo">
-                <img class="img-fluid" src="img/argans_white.png" alt="ARGANS company logo"/>
+                <a href="https://argans.co.uk"><img class="img-fluid" src="img/argans_white.png" alt="ARGANS company logo"/></a>
             </div>
             <div class="title">
                 <h1 class="display-1">Monitoring Marine Plastics from Space</h1>
@@ -40,6 +41,10 @@
                 </div>
         </section>
 
+        <section id="img_patch">
+            <p class="credit">Caroline Power, @carolinepower/photography</p>
+        </section>
+
         <section class="intro ocean">
             <div class="container-fluid">
                 <div class="row justify-content-center">
@@ -50,12 +55,13 @@
             </div>
         </section>
 
+        <section id="img_micro"></section>
+
         <section class="intro sunset">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 px-3">
-                        <p>Sensors onboard Earth Observation (EO) satellites observe phenomena at the global scale with short revisit time.</p>
-                        <p>Can remote sensing be used to detect and monitor marine plastics?</p>
+                        <p>How can Earth Observation (EO) remote sensing satellites assist the detection and monitoring of marine plastics?</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +69,7 @@
 
         <nav class="navbar">
             <div class="logo-container">
-                <img class="logo-image" src="img/logo.png" alt="logo">
+                <a href="https://argans.co.uk"><img class="logo-image" src="img/logo.png" alt="ARGANS logo"></a>
             </div>
             <ul id="nav-list" class="nav-menu">
                 <li class="menu-item"><a href="#resmali">RESMALI</a></li>
@@ -83,17 +89,13 @@
 
         <section class="intro ocean">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div id="MLlogo" class="col-lg-4">
                         <img class="img-fluid" src="img/MarineLitterLogo.png" alt="Marine Litter from Space logo"/>
                     </div>
                     <div class="col-lg-8 mt-5 px-5">
                         <h1>ARGANS Marine Litter Program</h1>
                     </div>
-                </div>
-                <div class="row">
-                    <p class="mt-3">Since 2017 ARGANS has been developing methods &amp; techniques for detecting and monitoring marine plastics and applying them to case studies in the North Eastern Atlantic, the Mediterranean, and the Black Sea.</p>
-                    <p>These projects have been commissioned by the European Space Agency and European Commission.</p>
                 </div>
             </div>
         </section>
@@ -113,7 +115,7 @@
                             <p>Under the General Studies Programme (GSP), the European Space Agency (ESA) initiated in 2017 the project 'Remote Sensing of Marine Litter' by funding two parallel contracts - RESMALI, led by ARGANS Limited, UK (team including: the University of Cadiz, Airbus and The Ocean Cleanup) and OPTIMAL, led by the Plymouth Marine Laboratory, UK.</p>
                             <p>The objective of RESMALI was to perform field sampling, experiments and modelling to determine the capability to detect plastic <abbr title="Marine Litter">ML</abbr> from orbiting sensors. A comprehensive <abbr title="Short Wave Infrared">SWIR</abbr> spectral signature library was compiled from virgin and oceanic plastics, acquired for different concentrations and kinds of plastics in varying stages of degradation, both wet and dry and some collected and frozen to preserve the biofilm that builds up on ML over time and also contributes to the spectral signature.</p>
                             <p>This library provided spectral measurements used as proxies for <abbr title="Bottom of Atmosphere">BOA</abbr> water-leaving reflectance, which was then attenuated by applying <abbr title="Radiative Transfer Model">RTM</abbr>s that model the effect that the atmosphere has on light propagation depending on the gaseous composition, water vapour and aerosol properties to infer the signal at <abbr title="Top of Atmosphere">TOA</abbr>.</p>
-                            <p>A paper published in the <a href="https://reader.elsevier.com/reader/sd/pii/S0304389420322809?token=1934C18DECCEAF90AEDB9450F8AFCD2EF0212D5C3D6BBEA942D3421518BDD5F55CE3C0A2F4B06D31DD35CCE2244B86C3&originRegion=eu-west-1&originCreation=20220316121354" target="_blank">Journal of Hazardous Materials</a> presents the findings of the study, which identified spectral signatures with a range of wavelengths from visible to SWIR that have affordable <abbr title="Signal-to-Noise Ratio">SNR</abbr> that the impact on the TOA signal, especially at viewing angles in the direction of sunglint, would enable detection and estimates of coverage from space down to 1% surface concentration. Further information about this project can be found by following <a href="https://theoceancleanup.com/updates/towards-spaceborne-detection-of-ocean-plastic/" target="_blank">The Ocean Cleanup</a>.</p>
+                            <p>A paper published in the <span class="link"><a class="link" href="https://reader.elsevier.com/reader/sd/pii/S0304389420322809?token=1934C18DECCEAF90AEDB9450F8AFCD2EF0212D5C3D6BBEA942D3421518BDD5F55CE3C0A2F4B06D31DD35CCE2244B86C3&originRegion=eu-west-1&originCreation=20220316121354" target="_blank">Journal of Hazardous Materials</a></span> presents the findings of the study, which identified spectral signatures with a range of wavelengths from visible to SWIR that have affordable <abbr title="Signal-to-Noise Ratio">SNR</abbr> that the impact on the TOA signal, especially at viewing angles in the direction of sunglint, would enable detection and estimates of coverage from space down to 1% surface concentration. Further information about this project can be found by following <span class="link"><a href="https://theoceancleanup.com/updates/towards-spaceborne-detection-of-ocean-plastic/" target="_blank">The Ocean Cleanup</a></span>.</p>
                         </div>
                     </div>
                 </div>
@@ -290,7 +292,44 @@
             </div>
         </section>
 
-        <section id="footer"></section>
+        <section id="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 footer-col">
+                        <h1>About Us</h1>
+                        <p class="mt-3">ARGANS, is a UK-registered company with headquarters based in Plymouth UK with offices in Sophia-Antipolis and Toulouse, France.</p>
+                        <p class="mt-3">We are specialists in satellite-based Earth Observation, remote-sensing applications and services, and geographical information systems used to map and monitor the marine, atmospheric and terrestrial environments.</p>
+                        <div class="logo">
+                            <a href="https://argans.co.uk"><img class="img-fluid" src="img/argans_white.png" alt="ARGANS company logo"/></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 footer-col">
+                        <h1>Contact Us</h1>
+                        <div id="contact">
+                            <p class="mt-3">
+                                <span class="material-symbols-outlined">mail</span>
+                                <a href="mailto:enquiries@argans.co.uk">enquiries@argans.co.uk</a>
+                            </p>
+                            <p class="mt-3">
+                                <span class="material-symbols-outlined">call</span>
+                                <a href="tel:+441751764298">+44(0)1751 764 298</a>
+                            </p>
+                            <p class="mt-3">
+                                <span class="material-symbols-outlined">language</span>
+                                <a href="https://argans.co.uk">argans.co.uk</a>
+                            </p>
+                        </div>
+                        <h1>Follow Us</h1>
+                    </div>
+                    <div class="col-sm-4 footer-col">
+                        <p class="mt-5">These projects were commissioned by the European Space Agency (ESA) unless otherwise attributed.</p>
+                        <div class="logo">
+                            <img class="img-fluid" src="img/logo_ESA_white.png" alt="European Space Agency logo"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <script>
             let wave1 = document.getElementById('wave1');
@@ -313,8 +352,6 @@
             var nav = document.getElementById("nav-list")
             btn.addEventListener('click', () => {nav.classList.toggle("active");});
         </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></>
 
     </body>
 </html>

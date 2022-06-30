@@ -7,7 +7,8 @@ html, body {
     /*height: 100vh;*/
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 10rem;
+    background-color: black;
 }
 
 h1 {
@@ -25,30 +26,13 @@ strong {
 }
 a {
     outline: none;
-    color: inherit;
+    color: #265301;
     text-decoration: none;
     padding: 2px 1px 0;
-  }
-  a:link {
-    color: #265301;
-  }
-  a:visited {
-    color: #437A16;
-  }
-  a:focus {
-    border-bottom: 1px solid;
-    background: #BAE498;
-  }
-  a:hover {
-    border-bottom: 1px solid;
-    background: #CDFEAA;
-  }
-  a:active {
-    background: #265301;
-    color: #CDFEAA;
-  }
-  a[href^="http"]::after,
-  a[href^="https://"]::after {
+    font-style: italic;
+}
+.link a[href^="http"]::after,
+.link a[href^="https://"]::after {
     content: "";
     width: 15px;
     height: 15px;
@@ -58,7 +42,7 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-  }
+}
 
 /* LANDING SECTION */
 section#landing {
@@ -73,8 +57,8 @@ section#landing {
 .logo {
     position: relative;
     z-index: 50;
-    width: 33vh;
-    padding: 50px;
+    width: fit-content;
+    padding: 25px;
 }
 .title {
     position: absolute;
@@ -155,8 +139,8 @@ section.intro {
     text-align: center;
     justify-content: center;
     align-content: center;
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -167,6 +151,40 @@ section.ocean {
     background-image: linear-gradient(black, rgb(0,192,255));
 }
 
+/* IMG SECTIONS */
+#img_patch {
+	height: 700px;
+    background-image: url("../img/img_plastic02.jpg");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 768px) {
+	#img_patch {
+		background-attachment: inherit;
+	}
+}
+#img_micro {
+	height: 700px;
+    background-image: url("../img/img_plastic03.jpg");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 768px) {
+	#img_micro {
+		background-attachment: inherit;
+	}
+}
+.credit {
+    position: relative;
+    top: 0;
+    text-align: left;
+    color: #fff;
+    font-size: small;
+}
 #MLlogo {
     position: relative;
     top: 0;
@@ -177,7 +195,9 @@ section.ocean {
 /* PORTFOLIO */
 .wrapper {
     display: flex;
-    padding: 3vmax;
+    padding-left: 3vmax;
+    padding-right: 3vmax;
+    padding-bottom: 6vmax;
     z-index: 1;
     background-image: linear-gradient(black, rgb(0,192,255));
     background-repeat: repeat-x;
@@ -187,17 +207,20 @@ section.ocean {
     overflow: hidden;
 }
 .wrapper h1 {
+    font-size: 3vmax;
     color: #006d77;
 }
 .wrapper h2 {
     font-variant-caps: small-caps;
+    font-size: 2vmax;
     letter-spacing: 0.1em;
     text-align: left;
+    padding-bottom: 2vmax;
     color: #341c1c;
 }
 .wrapper p {
     color: #111;
-    font-size: 2vw;
+    font-size: 1.5vmax;
 }
 .img-div {
     text-align: center;
@@ -223,25 +246,30 @@ section.ocean {
 section#footer {
     position: relative;
     width: 100%;
-    height: 33vh;
-    padding: 50px;
+    height: 50vh;
+    padding-top: 2em;
     background: #050505;
-    overflow: hidden;
+}
+#footer p {
+    font-size: 1vmax;
+}
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 /* NAVBAR */
 .navbar {
-    /* make it stick */
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    /* in front of all other elements */
     z-index: 99;
-    /* set background */
     background-color: white;
-    padding: 10px 5%;
-
-    /* define flex */
+    padding: 5px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,12 +297,23 @@ section#footer {
 .menu-icon {
     display: none;
 }
-@media only screen and (max-width: 600px) {
+
+/* WIDE MONITORS */
+@media only screen and (min-width: 82em) {
+    .intro h1 {
+        font-size: 7vmax;
+    }
+}
+/* MOBILE PHONES */
+@media only screen and (max-width: 62em) {
     .navbar {
         flex-direction: column;
     }
     .logo-container {
         width: 100%;
+    }
+    .logo-image {
+        display: none;
     }
     .nav-menu {
         display: none;
@@ -292,19 +331,23 @@ section#footer {
     .menu-icon {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 5px;
         right: 5%;
     }
     .menu-icon:hover .bar {
         background-color: darkcyan;
     }
-    .wrapper p {
-        font-size: 4vw;
+    .intro {
+        padding-top: 100px;
+        padding-bottom: 100px
     }
     .intro h1 {
-        font-size: 10vw;
+        font-size: 5vmax;
     }
     .intro p {
-        font-size: 6vw;
+        font-size: 4vmax;
+    }
+    #footer p {
+        font-size: 2vmax;
     }
 }
