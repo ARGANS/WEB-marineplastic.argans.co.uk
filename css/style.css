@@ -26,7 +26,7 @@ strong {
 }
 a {
     outline: none;
-    color: #265301;
+    color: #006d77;
     text-decoration: none;
     padding: 2px 1px 0;
     font-style: italic;
@@ -195,6 +195,7 @@ section.ocean {
 /* PORTFOLIO */
 .wrapper {
     display: flex;
+    flex-direction: column;
     padding-left: 3vmax;
     padding-right: 3vmax;
     padding-bottom: 6vmax;
@@ -242,11 +243,36 @@ section.ocean {
     text-align: justify;
     font-size: 1.25vmax;
 }
+.comment {
+    padding-left: 8ch;
+    padding-right: 8ch;
+    padding-top: 10em;
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+}
+.comment p {
+    font-size: 2vmax;
+    color: white;
+}
+.lead {
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 50px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.lead p {
+    color: rgb(194,234,189);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vmax;
+}
 /* FOOTER */
 section#footer {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 30vh;
     padding-top: 2em;
     background: #050505;
 }
@@ -346,6 +372,27 @@ section#footer {
     }
     .intro p {
         font-size: 4vmax;
+    }
+    .content p {
+        font-size: 16px;
+    }
+    .comment {
+        padding-left: 1ch;
+        padding-right: 1ch;
+        padding-top: 5em;
+        text-align: center;
+    }
+    .comment p {
+        font-size: 20px;
+    }
+    .lead {
+        padding-left: 1ch;
+        padding-right: 1ch;
+        padding-top: 2em;
+        text-align: center;
+    }
+    .lead p {
+        font-size: 24px;
     }
     #footer p {
         font-size: 2vmax;
