@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&display=swap" rel="stylesheet" />
@@ -103,19 +104,25 @@
         <section id="resmali" class="wrapper">
             <div class="container-fluid outer">
                 <div class="row">
-                    <div class="col">
+                    <div class="col content-header">
                         <h1>RESMALI</h1>
                         <h2>Feasibility of Plastic Detection from Space</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="content mt-3">
+                        <div class="content mt-3" data-sec="resmali">
                             <p>Marine plastics, absorb and scatter light according to characteristic optical properties due to the polymers and dyes used in manufacture and, in principle, a distinct spectral signature could be detected by remote sensing radiometers.</p>
-                            <p>Under the General Studies Programme (GSP), the European Space Agency (ESA) initiated in 2017 the project 'Remote Sensing of Marine Litter' by funding two parallel contracts - RESMALI, led by ARGANS Limited, UK (team including: the University of Cadiz, Airbus and The Ocean Cleanup) and OPTIMAL, led by the Plymouth Marine Laboratory, UK.</p>
-                            <p>The objective of RESMALI was to perform field sampling, experiments and modelling to determine the capability to detect plastic <abbr title="Marine Litter">ML</abbr> from orbiting sensors. A comprehensive <abbr title="Short Wave Infrared">SWIR</abbr> spectral signature library was compiled from virgin and oceanic plastics, acquired for different concentrations and kinds of plastics in varying stages of degradation, both wet and dry and some collected and frozen to preserve the biofilm that builds up on ML over time and also contributes to the spectral signature.</p>
-                            <p>This library provided spectral measurements used as proxies for <abbr title="Bottom of Atmosphere">BOA</abbr> water-leaving reflectance, which was then attenuated by applying <abbr title="Radiative Transfer Model">RTM</abbr>s that model the effect that the atmosphere has on light propagation depending on the gaseous composition, water vapour and aerosol properties to infer the signal at <abbr title="Top of Atmosphere">TOA</abbr>.</p>
-                            <p>A paper published in the <span class="link"><a class="link" href="https://reader.elsevier.com/reader/sd/pii/S0304389420322809?token=1934C18DECCEAF90AEDB9450F8AFCD2EF0212D5C3D6BBEA942D3421518BDD5F55CE3C0A2F4B06D31DD35CCE2244B86C3&originRegion=eu-west-1&originCreation=20220316121354" target="_blank">Journal of Hazardous Materials</a></span> presents the findings of the study, which identified spectral signatures with a range of wavelengths from visible to SWIR that have affordable <abbr title="Signal-to-Noise Ratio">SNR</abbr> that the impact on the TOA signal, especially at viewing angles in the direction of sunglint, would enable detection and estimates of coverage from space down to 1% surface concentration. Further information about this project can be found by following <span class="link"><a href="https://theoceancleanup.com/updates/towards-spaceborne-detection-of-ocean-plastic/" target="_blank">The Ocean Cleanup</a></span>.</p>
+                            <p>In 2017, under the General Studies Programme (GSP), the European Space Agency (ESA) initiated the project 'Remote Sensing of Marine Litter' by funding two parallel contracts - RESMALI, led by ARGANS Limited, UK (team including: the University of Cadiz, Airbus and The Ocean Cleanup) and OPTIMAL, led by the Plymouth Marine Laboratory, UK.
+                            <button onclick="readMore('resmali')" class="button">
+                                <i class="fa fa-chevron-circle-right"></i>
+                                <span class="label">read more</span>
+                            </button></p>
+                            <span class="more" style="display: none;">
+                                <p>The objective of RESMALI was to perform field sampling, experiments and modelling to determine the capability to detect plastic <abbr title="Marine Litter">ML</abbr> from orbiting sensors. A comprehensive <abbr title="Short Wave Infrared">SWIR</abbr> spectral signature library was compiled from virgin and oceanic plastics, acquired for different concentrations and kinds of plastics in varying stages of degradation, both wet and dry and some collected and frozen to preserve the biofilm that builds up on ML over time and also contributes to the spectral signature.</p>
+                                <p>This library provided spectral measurements used as proxies for <abbr title="Bottom of Atmosphere">BOA</abbr> water-leaving reflectance, which was then attenuated by applying <abbr title="Radiative Transfer Model">RTM</abbr>s that model the effect that the atmosphere has on light propagation depending on the gaseous composition, water vapour and aerosol properties to infer the signal at <abbr title="Top of Atmosphere">TOA</abbr>.</p>
+                                <p>A paper published in the <span class="link"><a class="link" href="https://reader.elsevier.com/reader/sd/pii/S0304389420322809?token=1934C18DECCEAF90AEDB9450F8AFCD2EF0212D5C3D6BBEA942D3421518BDD5F55CE3C0A2F4B06D31DD35CCE2244B86C3&originRegion=eu-west-1&originCreation=20220316121354" target="_blank">Journal of Hazardous Materials</a></span> presents the findings of the study, which identified spectral signatures with a range of wavelengths from visible to SWIR that have affordable <abbr title="Signal-to-Noise Ratio">SNR</abbr> that the impact on the TOA signal, especially at viewing angles in the direction of sunglint, would enable detection and estimates of coverage from space down to 1% surface concentration. Further information about this project can be found by following <span class="link"><a href="https://theoceancleanup.com/updates/towards-spaceborne-detection-of-ocean-plastic/" target="_blank">The Ocean Cleanup</a></span>.
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -142,15 +149,21 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="content mt-3">
-                            <p>Under the EO Science for Society funding scheme, ESA initiated a 12-month project in September 2018 led by ARGANS with partners from the University of the Aegean, University of Cadiz and the National Research Council, Institute of Marine Sciences, Italy. The project sought to determine the feasibility of using <em>currently</em> orbiting sensors for detection of marine plastics within the Mediterranean basin, which contains approximately 5-10&percnt; of the world's marine plastic, roughly 5-30 thousand tonnes.</p>
-                            <p>The team developed a processor that made use of multiple spectral indices calculated from the discrete wavelengths available to the Sentinel-2 <abbr title="Multi-Spectral Imager">MSI</abbr> sensor alongside a deterministic decision tree classifier to identify floating marine plastic in Copernicus Sentinel-2 images. The processor proved capable of identifying litter items as small as 50 square metres, which allowed detection of <span class="link"><a href="https://www.frontiersin.org/research-topics/12854/marine-litter-windrows" target="_blank">marine litter windrows</a></span>, elongated accumulations of marine debris ranging from a few tens of metres to over a kilometre in length.</p>
-                            <figure>
-                                <img class="figure-img img-fluid rounded" src="img/img_plastic01.jpg" alt="Floating plastic identified from Sentinel-2 image">
-                                <figcaption class="figure-caption text-center">A classifier-detected litter windrow from a Sentinel-2 image of an area east of the Po River delta <em>(left)</em> that is almost invisible on the <abbr title="Red Green Blue">RGB</abbr> image <em>(right)</em>.
-                                </figcaption>
-                            </figure>
-                            <p>This project was featured as an <span class="link"><a href="https://sentinels.copernicus.eu/web/success-stories/-/copernicus-sentinel-2-helps-advance-marine-debris-detection" target="_blank">ESA Sentinel Success Story</a></span>.</p>
+                        <div class="content mt-3" data-sec="eotrack">
+                            <p>Under the EO Science for Society funding scheme, ESA initiated a 12-month project in September 2018 led by ARGANS with partners from the University of the Aegean, University of Cadiz and the National Research Council, Institute of Marine Sciences, Italy. The project sought to determine the feasibility of using <em>currently</em> orbiting sensors for detection of marine plastics within the Mediterranean basin, which contains approximately 5-10&percnt; of the world's marine plastic, roughly 5-30 thousand tonnes.
+                            <button onclick="readMore('eotrack')" class="button">
+                                <i class="fa fa-chevron-circle-right"></i>
+                                <span class="label">read more</span>
+                            </button></p>
+                            <span class="more" style="display: none;">
+                                <p>The team developed a processor that made use of multiple spectral indices calculated from the discrete wavelengths available to the Sentinel-2 <abbr title="Multi-Spectral Imager">MSI</abbr> sensor alongside a deterministic decision tree classifier to identify floating marine plastic in Copernicus Sentinel-2 images. The processor proved capable of identifying litter items as small as 50 square metres, which allowed detection of <span class="link"><a href="https://www.frontiersin.org/research-topics/12854/marine-litter-windrows" target="_blank">marine litter windrows</a></span>, elongated accumulations of marine debris ranging from a few tens of metres to over a kilometre in length.</p>
+                                <figure>
+                                    <img class="figure-img img-fluid rounded" src="img/img_plastic01.jpg" alt="Floating plastic identified from Sentinel-2 image">
+                                    <figcaption class="figure-caption text-center">A classifier-detected litter windrow from a Sentinel-2 image of an area east of the Po River delta <em>(left)</em> that is almost invisible on the <abbr title="Red Green Blue">RGB</abbr> image <em>(right)</em>.
+                                    </figcaption>
+                                </figure>
+                                <p>This project was featured as an <span class="link"><a href="https://sentinels.copernicus.eu/web/success-stories/-/copernicus-sentinel-2-helps-advance-marine-debris-detection" target="_blank">ESA Sentinel Success Story</a></span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -177,9 +190,17 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="content mt-3">
-                            <p>To promote data provided by the the <span class="link"><a href="https://marine.copernicus.eu" target="_blank">Copernicus Marine Environmental Monitoring Service (CMEMS)</a></span>, ARGANS was commissioned to develop a marine litter forecasting service for the European North West Shelf seas to track the dispersion of litter arising from river outflow to stranding on the shore.</p>
+                        <div class="content mt-3" data-sec="littertep">
+                            <p>To promote data provided by the the <span class="link"><a href="https://marine.copernicus.eu" target="_blank">Copernicus Marine Environmental Monitoring Service (CMEMS)</a></span>, ARGANS was commissioned to develop a marine litter forecasting service for the European North West Shelf seas to track the dispersion of litter arising from river outflow to its stranding on the shore.
+                            <button onclick="readMore('littertep')" class="button">
+                                <i class="fa fa-chevron-circle-right"></i>
+                                <span class="label">read more</span>
+                            </button></p>
+                            <span class="more" style="display: none;">
+                                <p>more</p>
+                            </span>
                         </div>
+                        <span class="weblink"><a href="https://litter-tep.argans.eu" target="_blank"><i class="fa fa-globe"></i>&nbsp;website</a></span>
                     </div>
                 </div>
             </div>
@@ -194,17 +215,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content mt-3">
-                            <p> It had been observed that sea foam, seaweed and plankton form features called windrows, transient hydrodynamic phenomena with lengths of the order of 10km, caused by convergent oceanic processes. If sufficient concentrations of marine plastics were present these would also be entrained within windrow structures and the WASP project investigated whether this aggregation would enable currently orbiting EO sensors, specifically the Sentinel-2 <abbr title="Multi-Spectral Imager">MSI</abbr> to use windrows as proxies for the detection of marine plastic litter.</p>
-                            <p></p>
+                    <div class="col">
+                        <div class="content mt-3" data-sec="wasp">
+                            <p> It had been observed that sea foam, seaweed and plankton form features called windrows, transient hydrodynamic phenomena with lengths of the order of 10km, caused by convergent oceanic processes. If sufficient concentrations of marine plastics were present these would also be entrained within windrow structures and the WASP project investigated whether this aggregation would enable currently orbiting EO sensors, specifically the Sentinel-2 <abbr title="Multi-Spectral Imager">MSI</abbr> to use windrows as proxies for the detection of marine plastic litter.
+                            <button onclick="readMore('littertep')" class="button">
+                                <i class="fa fa-chevron-circle-right"></i>
+                                <span class="label">read more</span>
+                            </button></p>
+                            <span class="more" style="display: none;">
+                                <p>more</p>
+                            </span>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <p></p>
-                        </div>
-                    </div>
+                        <span class="weblink"><a href="https://litter-tep.argans.eu" target="_blank"><i class="fa fa-globe"></i>&nbsp;website</a></span>
                 </div>
             </div>
         </section>
@@ -351,7 +373,7 @@
             </div>
         </section>
 
-        <script>
+        <script type="text/javascript">
             let wave1 = document.getElementById('wave1');
             let wave2 = document.getElementById('wave2');
             let wave3 = document.getElementById('wave3');
@@ -367,10 +389,27 @@
             })
         </script>
 
-        <script>
+        <script type="text/javascript">
             var btn = document.getElementById("nav-toggle");
             var nav = document.getElementById("nav-list")
             btn.addEventListener('click', () => {nav.classList.toggle("active");});
+        </script>
+
+        <script type="text/javascript">
+            function readMore(sec) {
+                var more = document.querySelector(`.content[data-sec="${sec}"] .more`);
+                var label = document.querySelector(`.content[data-sec="${sec}"] .label`);
+                var btn = document.querySelector(`.content[data-sec="${sec}"] .button i`);
+                if (more.style.display === "none") {
+                    more.style.display = "inline";
+                    label.innerHTML = "";
+                    btn.className = "fa fa-chevron-circle-up"
+                } else {
+                    more.style.display = "none";
+                    label.innerHTML = "read more";
+                    btn.className = "fa fa-chevron-circle-right"
+                }
+            }
         </script>
 
     </body>
