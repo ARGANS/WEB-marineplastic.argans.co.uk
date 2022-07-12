@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
         <!-- Chrome, Firefox OS and Opera -->
         <meta name="theme-color" content="#00C0FF" />
-    <!-- Windows Phone -->
+        <!-- Windows Phone -->
         <meta name="msapplication-navbutton-color" content="#00C0FF" />
-    <!-- iOS Safari -->
+        <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#00C0FF" />
         <title>ARGANS | Detecting & Monitoring Marine Plastics from Space</title>
         <meta name="author" content="Stephen Emsley" />
@@ -136,15 +136,27 @@
                     <div class="col">
                         <div class="content mt-2" data-sec="resmali">
                             <p>Marine plastics, absorb and scatter light according to characteristic optical properties due to the polymers and dyes used in manufacture and, in principle, a distinct spectral signature could be detected by remote sensing radiometers.</p>
-                            <p>In 2017, under the General Studies Programme (GSP), the European Space Agency (ESA) initiated the project 'Remote Sensing of Marine Litter' by funding two parallel contracts - RESMALI, led by ARGANS Limited, UK (team including: the University of Cadiz, Airbus and The Ocean Cleanup) and OPTIMAL, led by the Plymouth Marine Laboratory, UK.
-                            <button onclick="readMore('resmali')" class="button">
-                                <i class="fa fa-chevron-circle-right"></i>
-                                <span class="label">read more</span>
-                            </button></p>
+                            <p>In 2017, under the General Studies Programme (GSP), the European Space Agency (ESA) initiated the project 'Remote Sensing of Marine Litter' by funding two parallel contracts - RESMALI, led by ARGANS Limited, UK (team including: the University of Cadiz, Airbus and The Ocean Cleanup) and OPTIMAL, led by the Plymouth Marine Laboratory, UK.</p>
+                            <p>
+                                <button onclick="readMore('resmali')" class="button">
+                                    <i class="fa fa-chevron-circle-right"></i>
+                                    <span class="label">read more</span>
+                                </button>
+                            </p>
                             <span class="more" style="display: none;">
                                 <p>The objective of RESMALI was to perform field sampling, experiments and modelling to determine the capability to detect plastic <abbr title="Marine Litter">ML</abbr> from orbiting sensors. A comprehensive <abbr title="Short Wave Infrared">SWIR</abbr> spectral signature library was compiled from virgin and oceanic plastics, acquired for different concentrations and kinds of plastics in varying stages of degradation, both wet and dry and some collected and frozen to preserve the biofilm that builds up on ML over time and also contributes to the spectral signature.</p>
                                 <p>This library provided spectral measurements used as proxies for <abbr title="Bottom of Atmosphere">BOA</abbr> water-leaving reflectance, which was then attenuated by applying <abbr title="Radiative Transfer Model">RTM</abbr>s that model the effect that the atmosphere has on light propagation depending on the gaseous composition, water vapour and aerosol properties to infer the signal at <abbr title="Top of Atmosphere">TOA</abbr>.</p>
-                                <p>A paper published in the <span class="link"><a class="link" href="https://reader.elsevier.com/reader/sd/pii/S0304389420322809?token=1934C18DECCEAF90AEDB9450F8AFCD2EF0212D5C3D6BBEA942D3421518BDD5F55CE3C0A2F4B06D31DD35CCE2244B86C3&originRegion=eu-west-1&originCreation=20220316121354" target="_blank">Journal of Hazardous Materials</a></span> presents the findings of the study, which identified spectral signatures with a range of wavelengths from visible to SWIR that have affordable <abbr title="Signal-to-Noise Ratio">SNR</abbr> that the impact on the TOA signal, especially at viewing angles in the direction of sunglint, would enable detection and estimates of coverage from space down to 1% surface concentration. Further information about this project can be found by following <span class="link"><a href="https://theoceancleanup.com/updates/towards-spaceborne-detection-of-ocean-plastic/" target="_blank">The Ocean Cleanup</a></span>.
+                                <p>A paper published in the <span class="link"><a class="link" href="https://reader.elsevier.com/reader/sd/pii/S0304389420322809?token=1934C18DECCEAF90AEDB9450F8AFCD2EF0212D5C3D6BBEA942D3421518BDD5F55CE3C0A2F4B06D31DD35CCE2244B86C3&originRegion=eu-west-1&originCreation=20220316121354" target="_blank">Journal of Hazardous Materials</a></span> presents the findings of the study:
+                                    <ul>
+                                        <li>No significant spectral differences between raw polymers and ocean-harvested polymers were detected, which simplifies the detection paradigm for ML.</li>
+                                        <li>No distinguishable signature of plastic litter with pixel fractions below 1% seems detectable.</li>
+                                        <li>The materials' apparent colour, especially visible bands, is important. Most floating plastic is white or bleached, with an intense hue; thus, discrimination between plastic and natural materials, e.g., floating seaweed, and phytoplankton, may be achieved considering this property, and there is also a dependency between <abbr title="Near Infra Red">NIR</abbr> and <abbr title="Short Wave Infrared">SWIR</abbr>.</li>
+                                        <li>Plastic polymers exhibited Lambertian-equivalent behaviour in the measured reflectance spectra.</li>
+                                        <li>The impact of water on the refractive index (i.e., plastic/air vs plastic/water) can strongly affect the angular dependency of the light source and sensor position.</li>
+                                        <li>Atmospheric correction may strongly impact ML detection capability. Most of the relevant signal from plastic polymers is in the NIR and SWIR, the same bands used in ocean colour applications to adjust atmospheric corrections.</li>
+                                    </ul>
+                                </p>
+                                <p>Further information about this project can be found by following <span class="link"><a href="https://theoceancleanup.com/updates/towards-spaceborne-detection-of-ocean-plastic/" target="_blank">The Ocean Cleanup</a></span>.</p>
                             </span>
                         </div>
                     </div>
@@ -179,6 +191,8 @@
                                     <figcaption class="figure-caption text-center">Artificial litter targets off Lesbos Island, Greece, shown by <em>(left)</em> drone and in a <em>(right)</em> Sentinel-2 image processed using the litter detection algorithm.
                                     </figcaption>
                                 </figure>
+                            </p>
+                            <p>
                                 <button onclick="readMore('geointml')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
                                     <span class="label">read more</span>
@@ -212,6 +226,8 @@
                                     <figcaption class="figure-caption text-center">A classifier-detected litter windrow from a Sentinel-2 image of an area east of the Po River delta <em>(left)</em> that is almost invisible on the <abbr title="Red Green Blue">RGB</abbr> image <em>(right)</em>.
                                     </figcaption>
                                 </figure>
+                            </p>
+                            <p>
                                 <button onclick="readMore('eotrack')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
                                     <span class="label">read more</span>
@@ -246,6 +262,8 @@
                                     <figcaption class="figure-caption text-center">Snippets recorded by the WASP Processor: <em>{far left)</em> visible RGB, <em>(middle left</em> visible RGB wth identified filament pixels in red, <em>(middle right)</em> Normalised Difference Water Index, <em>(far right)</em> Mid-step of plastics identification algorithm.
                                     </figcaption>
                                 </figure>
+                            </p>
+                            <p>
                                 <button onclick="readMore('wasp')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
                                     <span class="label">read more</span>
@@ -289,6 +307,8 @@
                                     <figcaption class="figure-caption text-center">A simulation of outflow dispersal from the River Tamar, Plymouth UK, over 4 days suggests it washes back to the beaches of the South Hams coast to the east and Whitsand Bay to the west.
                                     </figcaption>
                                 </figure>
+                            </p>
+                            <p>
                                 <button onclick="readMore('littertep')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
                                     <span class="label">read more</span>
@@ -325,6 +345,8 @@
                                     <figcaption class="figure-caption text-center">An animation of annual marine litter density in the Black Sea modelled based on daily riverine inputs and dispersion due to water currents and drift.
                                     </figcaption>
                                 </figure>
+                            </p>
+                            <p>
                                 <button onclick="readMore('bsplastic')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
                                     <span class="label">read more</span>
@@ -342,7 +364,7 @@
             </div>
             <div class="row comment">
                 <div class="col">
-                    <p>Despite the success in using Sentinel-2 data, the RESMALI project had concluded that current orbital sesnors are sub-optimal for litter detection.</p>
+                    <p>Despite the success in using Sentinel-2 data, the RESMALI project had concluded that current orbital sensors are sub-optimal for litter detection.</p>
                 </div>
             </div>
             <div class="row lead">
@@ -363,6 +385,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="content mt-2" data-sec="mlopsi">
+                            <p>The ML-OPSI project was implemented through the ESA Open Space Innovative Platform (OSIP) Campaign 'Remote Sensing of Plastic Marine Litter'. The project was supported by Shungu Garaba and AIRBUS and collaboration with the University of Oldenburg, Germany and Cadiz, Spain.</p>
+                            <p>The ML-OPSI project delivered a technical specification for a Operational Performance Simulator (OPSI) for Marine Litter (ML), and a demonstrator for simulating the <abbr title="Top-of-Atmosphere">TOA</abbr> reflectance based on targets with varying proportions of litter types.
+                                <figure>
+                                    <img class="figure-img img-fluid rounded" src="img/img_mlopsi.png" alt="ML-OPSI GUI">
+                                    <figcaption class="figure-caption text-center">The ML-OPSI demonstrator GUI allows user to select litter and water type, calculates water-leaving reflectance, and uses the 6SV <abbr title="Radiative Transfer Model">RTM</abbr> and a choice of Sentinel-2 or Landsat 8 <abbr title="Spectral Response Function">SRF</abbr> to simulate sensor detection.
+                                    </figcaption>
+                                </figure>
+                            </p>
                             <p>
                                 <button onclick="readMore('mlopsi')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
@@ -370,7 +400,11 @@
                                 </button>
                             </p>
                             <span class="more" style="display: none;">
+                                <p>Sending an EO instrument into orbit is an expensive operation. The development of Sentinel-2 started in 1998, the first satellite was launched in 2015 and the second in 2016, with an expected operational life of 7 years, which has already been surpassed. The combined cost to build the two satellites was 350 million euro. That does not include the launch or subsequent operational cost. Mistakes or oversights in instrument design are costly and impact mission objectives post-launch. During operation, instruments degrade and require calibration and retrieval algorithms evolve.</p>
+                                <p>A Mission Performance Simulator models the characteristics of the instrument, the orbiting platform and, for passive optical sensors, the propagation of light from target to acquisition, considering the effects of atmosphere and interaction with the optical and electronic components of the instrument, to simulate the expected signal and subsequent data package, which can be processed using retrieval algorithms as if from the real sensor.</p>
+                                <p>The baseline architecture ML-OPSI conforms to that described <a href="https://www.researchgate.net/publication/235699915_ARCHEO-E2E_A_Reference_Architecture_for_Earth_Observation_end-to-end_Mission_Performance_Simulators" target="_blank"> ARCHEO-E2E: A Reference Architecture for Earth Observation end-to-end Mission Performance Simulators (2012)</a>. The algorithm for generating BOA water leaving reflectance was based on work published by <a href="https://doi.org/10.1016/j.marpolbul.2017.11.011" target="_blank">Goddjin-Murphy <em>et al.</em> (2018)</a> and laboratory measurements of spectral signatures from various litter types gathered from <a href="https://doi.org/10.1016/j.jhazmat.2020.124290" target="_false">Garaba, S. <em>et al.</em> (2021)</a> and <a href="https://doi.org/10.4121/12896312.v2" target="_blank">Knaeps, E. <em>et al.</em> (2020)</a>.</p>
                                 <p>By providing a modelling &amp; simulation framework enabling researchers to build virtual experiments by combining pre-built, re-useable, building blocks within a low-code environment and thus, by democratization, reduce the barriers to entry for using the various sophisticated computational techniques available for investigating and understanding complex systems, like monitoring marine plastic from satellite.</p>
+                                <p>The ML-OPSI software is a downloadable Python wheel package, compiled for Linux Ubuntu 18.04 LTS or MacOS 12+. It is a demo, not intended as an operational system nor as an implementation of the generic, component-based, framework specified in the documentation.</p>
                             </span>
                         </div>
                     </div>
@@ -382,13 +416,16 @@
             <div class="container-fluid outer">
                 <div class="row">
                     <div class="col">
-                        <h1>Future direction</h1>
+                        <h1>Conclusion &amp; Future</h1>
                         <h2></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="content mt-2" data-sec="future">
+                            <p>Since RESMALI, in 2017, ARGANS has made advances in the knowledge and understanding of the problem of detecting the presence of marine litter from EO remote sensing satellites. Using currently operational low-cost technology, i.e. Copernicus Sentinel-2 MSI, which has neither optimal spatial nor spectral resolution, a litter processor has been developed capable of detecting marine litter accumulations, which has been verified and validated in the frame of the <a href="#eotrack">EOTrack Med<a>, <a href="#wasp">WASP</a> and <a href="bsplastic">Black Sea plastic</a> projects.</p>
+                            <p>Work has also progressed on developing and improving a processor capable of detecting terrestrial accumulations of litter, providing a machine learning approach with improved performance at classification.
+                            <p>In addition to developing these processors, ARGANS has implemented sophisticated software to predict the dispersion and fate of floating debris within the ocean using freely available current, wave and wind data. Finally, making strides towards a component-based framework that could be used to aid future instrument specification to optimise the detection of marine debris.</p>
                             <p>
                                 <button onclick="readMore('future')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
