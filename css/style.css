@@ -178,6 +178,19 @@ section.ocean {
 		background-attachment: inherit;
 	}
 }
+#img_beach {
+	height: 500px;
+    background-image: url("../img/img_plastic06.jpg");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 768px) {
+	#img_micro {
+		background-attachment: inherit;
+	}
+}
 .credit {
     position: relative;
     top: 0;
@@ -190,6 +203,9 @@ section.ocean {
     top: 0;
     max-width: fit-content;
     z-index: 50;
+}
+figure {
+    text-align: center;
 }
 .figure-caption {
     font-size: medium;
@@ -306,6 +322,16 @@ section#footer {
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
+}
+section#bottom {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    padding-top: 2em;
+    background: #161616;
+}
+#bottom p {
+    font-size: 1vmax;
 }
 
 /* NAVBAR */
