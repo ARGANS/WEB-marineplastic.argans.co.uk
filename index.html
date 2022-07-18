@@ -35,7 +35,17 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.js"></script>
         <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-304930819-Y">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-304930819-Y', {'anonymize_ip': true});
+        </script>
 
     </head>
     <body>
@@ -43,7 +53,7 @@
             <div class="logo">
                 <a href="https://argans.co.uk"><img class="img-fluid" src="img/argans_white.png" alt="ARGANS company logo"/></a>
             </div>
-            <div class="title">
+            <div class="title" data-aos="fade-up" data-aos-duration="3000">
                 <h1 class="display-1">Monitoring Marine Plastics from Space</h1>
             </div>
             <div class="sentinel">
@@ -58,7 +68,7 @@
         <section class="intro sunset">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-lg-9">
+                    <div class="col-lg-9" data-aos="fade-up" data-aos-duration="3000">
                         <p>Since 2000 the global production of plastic has risen from 200 to 380 million metric tons.</p>
                         <p class="mt-5">Eleven metric tons of plastic enters the ocean each year. This is estimated to triple by 2040. <cite>(UNEP 2021)</cite></p>
                     </div>
@@ -72,7 +82,7 @@
         <section class="intro ocean">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-lg-9 px-3">
+                    <div class="col-lg-9 px-3" data-aos="fade-up" data-aos-duration="3000">
                         <p>1% of marine plastic is visible on the surface. The remaining 99% are less than 5mm, degrade slowly, are ubiqitous throughout the oceans.</p>
                     </div>
                 </div>
@@ -83,7 +93,7 @@
 
         <section class="intro sunset">
             <div class="container-fluid">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="3000">
                     <div class="col-lg-9 px-3">
                         <p>How can Earth Observation (EO) remote sensing satellites assist the detection and monitoring of marine plastics?</p>
                     </div>
@@ -95,14 +105,15 @@
             <div class="logo-container">
                 <a href="https://argans.co.uk"><img class="logo-image" src="img/logo.png" alt="ARGANS logo"></a>
             </div>
-            <ul id="nav-list" class="nav-menu">
-                <li class="menu-item"><a href="#resmali">RESMALI</a></li>
-                <li class="menu-item"><a href="#eotrack">EOTrack Med</a></li>
-                <li class="menu-item"><a href="#wasp">WASP</a></li>
-                <li class="menu-item"><a href="#bsplastic">Black Sea</a></li>
-                <li class="menu-item"><a href="#littertep">Litter TEP</a></li>
-                <li class="menu-item"><a href="#mlopsi">ML-OPSI</a></li>
-                <li class="menu-item"><a href="#future">The Future</a></li>
+            <ul id="nav-list" class="container nav-menu">
+                <li class="active resmali menu-item"><a href="#resmali">RESMALI</a></li>
+                <li class="geointml menu-item"><a href="#geointml">GeoInt ML</a></li>
+                <li class="eotrack menu-item"><a href="#eotrack">EOTrack Med</a></li>
+                <li class="wasp menu-item"><a href="#wasp">WASP</a></li>
+                <li class="littertep menu-item"><a href="#littertep">Litter TEP</a></li>
+                <li class="bsplastic menu-item"><a href="#bsplastic">Black Sea</a></li>
+                <li class="mlopsi menu-item"><a href="#mlopsi">ML-OPSI</a></li>
+                <li class="future menu-item"><a href="#future">The Future</a></li>
             </ul>
             <div id="nav-toggle" class="menu-icon">
                 <div class="bar"></div>
@@ -117,7 +128,7 @@
                     <div id="MLlogo" class="col-lg-4">
                         <img class="img-fluid" src="img/MarineLitterLogo.png" alt="Marine Litter from Space logo"/>
                     </div>
-                    <div class="col-lg-8 mt-5 px-5">
+                    <div class="col-lg-8 mt-5 px-5" data-aos="fade-up" data-aos-duration="3000">
                         <h1>ARGANS Marine Litter Program</h1>
                     </div>
                 </div>
@@ -167,7 +178,7 @@
                     <p>RESMALI concluded that detection of marine debris from space was feasible, although EO sensors that combine both hyperspectral imaging and sufficiently fine-scale spatial resolution (<abbr title="Ground Sample Distance">GSD</abbr>) to facilitate detection are not currently available.</p>
                 </div>
             </div>
-            <div class="row lead">
+            <div class="row lead" data-aos="zoom-in" data-eos-easing="ease-out" data-aos-duration="1500" data-aos-delay="500">
                 <div class="col">
                     <p>What can be detected using EO sensors that are in orbit now?</p>
                 </div>
@@ -186,6 +197,7 @@
                     <div class="col">
                         <div class="content mt-2" data-sec="geointml">
                             <p>A 6-month feasibility study was commissioned under the Space for Smarter Government Program (SSGP) funded by the UK Space Agency (UKSA) to assess the capability of providing a service using public satellite data to routinely identify and monitor marine litter. Using the the discrete wavelengths detected by the Copernicus-2 MSI in the visible, <abbr title="Near Infra Red">NIR</abbr> and <abbr title="Short Wave Infrared">SWIR</abbr> a radiometric signature unique to floating ocean plastic and distinquishable from floating vegetation was identified, enabling the development of a baseline EO processor to detect marine litter targets.
+                            </p><p>
                                 <figure>
                                     <img class="figure-img img-fluid rounded" src="img/img_plastic04.png" alt="Floating plastic identified from Sentinel-2 image">
                                     <figcaption class="figure-caption text-center">Artificial litter targets off Lesbos Island, Greece, shown by <em>(left)</em> drone and in a <em>(right)</em> Sentinel-2 image processed using the litter detection algorithm.
@@ -221,6 +233,7 @@
                     <div class="col">
                         <div class="content mt-2" data-sec="eotrack">
                             <p>Under the EO Science for Society funding scheme, ESA initiated a 12-month project in September 2018 led by ARGANS with partners from the University of the Aegean, <abbr title="Consiglio Nazionale delle Richerche">CNR</abbr>, Italy and the University of Cadiz Marine Litter Lab (MARLUCA). The project sought to determine the feasibility of using <em>currently</em> orbiting sensors for detection of marine plastics within the Mediterranean basin, which contains approximately 5-10&percnt; of the world's marine plastic, roughly 5-30 thousand tonnes.
+                            </p><p>
                                 <figure>
                                     <img class="figure-img img-fluid rounded" src="img/img_plastic01.jpg" alt="Floating plastic identified from Sentinel-2 image">
                                     <figcaption class="figure-caption text-center">A classifier-detected litter windrow from a Sentinel-2 image of an area east of the Po River delta <em>(left)</em> that is almost invisible on the <abbr title="Red Green Blue">RGB</abbr> image <em>(right)</em>.
@@ -257,9 +270,11 @@
                         <div class="content mt-3" data-sec="wasp">
                             <p>The WASP project was implemented through the ESA Open Space Innovative Platform (OSIP) Campaign 'Remote Sensing of Plastic Marine Litter' and included <abbr title="Consiglio Nazionale delle Richerche">CNR</abbr>, Italy and the University of Cadiz Marine Litter Lab (MARLUCA).</p>
                             <p>It exploited Copernicus Sentinel-2 <abbr title="Top-of-Atmosphere">TOA</abbr> L1C images to detect the presence of filaments of floating marine debris using the prototype EO processor developed in the ESA <a href="#eotrack">EOTrack Med</a> project, that proved that Sentinel-2 data can detect marine litter accumulations.
+                            </p><p>
                                 <figure>
-                                    <img class="figure-img img-fluid rounded" src="img/img_plastic05.png" alt="Examples of ocean windows">
-                                    <figcaption class="figure-caption text-center">Snippets recorded by the WASP Processor: <em>{far left)</em> visible RGB, <em>(middle left</em> visible RGB wth identified filament pixels in red, <em>(middle right)</em> Normalised Difference Water Index, <em>(far right)</em> Mid-step of plastics identification algorithm.
+                                    <img class="figure-img img-fluid rounded" src="img/img_wasp.gif" alt="Animation of seasonal plastic density detected using Sentinel-2 images">
+                                    <figcaption class="figure-caption text-center">
+                                        Seasonal distribution of plastic detected in the Mediterranean Sea as detected using the WASP marine litter classifer to process Sentinel-2 images.
                                     </figcaption>
                                 </figure>
                             </p>
@@ -283,7 +298,7 @@
                     <p>These studies demonstrated that floating marine debris can be detected using low-cost public EO images if the litter accumulates within aggregates, such as windrows or mats.</p>
                 </div>
             </div>
-            <div class="row lead">
+            <div class="row lead" data-aos="zoom-in" data-eos-easing="ease-out" data-aos-duration="1500" data-aos-delay="500">
                 <div class="col">
                     <p>Can a knowledge of ocean hydrodynamics allow identification of potential areas of aggregation?</p>
                 </div>
@@ -302,6 +317,7 @@
                     <div class="col">
                         <div class="content mt-2" data-sec="littertep">
                             <p>To promote data provided by the the <span class="link"><a href="https://marine.copernicus.eu" target="_blank">Copernicus Marine Environmental Monitoring Service (CMEMS)</a></span>, ARGANS was commissioned to develop a marine litter forecasting service for the European North West Shelf seas, covering the North Sea, the English and Bristol Channels and the Atlantic coast along Ireland and French Brittary, considering 30 European rivers. The aim of the service is to track the dispersion of litter arising from river outflow, drift and ocean currents to its stranding on the shore.
+                            </p><p>
                                 <figure>
                                     <img class="figure-img img-fluid rounded" src="img/img_littertep.gif" alt="Tamar River simulated 5 day outflow">
                                     <figcaption class="figure-caption text-center">A simulation of outflow dispersal from the River Tamar, Plymouth UK, over 4 days suggests it washes back to the beaches of the South Hams coast to the east and Whitsand Bay to the west.
@@ -338,8 +354,9 @@
                 <div class="row">
                     <div class="col">
                         <div class="content mt-2" data-sec="bsplastic">
-                            <p>The purpose of the ESA-funded project was to improve marine debris detection and to develop an algorithm to detect terrestrial litter dump sites.</p>
+                            <p>The purpose of the ESA-funded project was to improve detection of small amounts of marine debris and to develop a detector for terrestrial litter dump sites.</p>
                             <p>Marine litter hotspots, predicted using drift modelling of the Black Sea, were used to select a combination of band indices and thresholds that according to the environmental conditions increased detection probability and reduced false positives. For terrestrial detection, a Convolutional Neural Network (CNN) provided the best performance, with least false positives, although limited by the size of training set.
+                            </p><p>
                                 <figure>
                                     <img class="figure-img img-fluid rounded" src="img/BSPlasticDrift.gif" alt="Animation of current-mediated transport in the Black Sea">
                                     <figcaption class="figure-caption text-center">An animation of annual marine litter density in the Black Sea modelled based on daily riverine inputs and dispersion due to water currents and drift.
@@ -367,7 +384,7 @@
                     <p>Despite the success in using Sentinel-2 data, the RESMALI project had concluded that current orbital sensors are sub-optimal for litter detection.</p>
                 </div>
             </div>
-            <div class="row lead">
+            <div class="row lead" data-aos="zoom-in" data-eos-easing="ease-out" data-aos-duration="1500" data-aos-delay="500">
                 <div class="col">
                     <p>What would be the ideal characteristics of a sensor designed specifically for the detection of litter?</p>
                 </div>
@@ -387,6 +404,7 @@
                         <div class="content mt-2" data-sec="mlopsi">
                             <p>The ML-OPSI project was implemented through the ESA Open Space Innovative Platform (OSIP) Campaign 'Remote Sensing of Plastic Marine Litter'. The project was supported by Shungu Garaba and AIRBUS and collaboration with the University of Oldenburg, Germany and Cadiz, Spain.</p>
                             <p>The ML-OPSI project delivered a technical specification for a Operational Performance Simulator (OPSI) for Marine Litter (ML), and a demonstrator for simulating the <abbr title="Top-of-Atmosphere">TOA</abbr> reflectance based on targets with varying proportions of litter types.
+                            </p><p>
                                 <figure>
                                     <img class="figure-img img-fluid rounded" src="img/img_mlopsi.png" alt="ML-OPSI GUI">
                                     <figcaption class="figure-caption text-center">The ML-OPSI demonstrator GUI allows user to select litter and water type, calculates water-leaving reflectance, and uses the 6SV <abbr title="Radiative Transfer Model">RTM</abbr> and a choice of Sentinel-2 or Landsat 8 <abbr title="Spectral Response Function">SRF</abbr> to simulate sensor detection.
@@ -416,7 +434,7 @@
             <div class="container-fluid outer">
                 <div class="row">
                     <div class="col">
-                        <h1>Conclusion &amp; Future</h1>
+                        <h1>The Future</h1>
                         <h2></h2>
                     </div>
                 </div>
@@ -425,7 +443,6 @@
                         <div class="content mt-2" data-sec="future">
                             <p>Since RESMALI, in 2017, ARGANS has made advances in the knowledge and understanding of the problem of detecting the presence of marine litter from EO remote sensing satellites. Using currently operational low-cost technology, i.e. Copernicus Sentinel-2 MSI, which has neither optimal spatial nor spectral resolution, a litter processor has been developed capable of detecting marine litter accumulations, which has been verified and validated in the frame of the <a href="#eotrack">EOTrack Med<a>, <a href="#wasp">WASP</a> and <a href="bsplastic">Black Sea plastic</a> projects.</p>
                             <p>Work has also progressed on developing and improving a processor capable of detecting terrestrial accumulations of litter, providing a machine learning approach with improved performance at classification.
-                            <p>In addition to developing these processors, ARGANS has implemented sophisticated software to predict the dispersion and fate of floating debris within the ocean using freely available current, wave and wind data. Finally, making strides towards a component-based framework that could be used to aid future instrument specification to optimise the detection of marine debris.</p>
                             <p>
                                 <button onclick="readMore('future')" class="button">
                                     <i class="fa fa-chevron-circle-right"></i>
@@ -433,12 +450,23 @@
                                 </button>
                             </p>
                             <span class="more" style="display: none;">
-                                <p></p>
+                                <p>In addition to developing these processors, ARGANS has implemented sophisticated software to predict the dispersion and fate of floating debris within the ocean using freely available current, wave and wind data. Finally, making strides towards a component-based framework that could be used to aid future instrument specification to optimise the detection of marine debris.</p>
+                                <p>Going forward the aim is to continue to refine the techniques for litter detection, both marine and terrestrial, although there is a limit to how much informatoin can be extracted from Sentinel-2, and VHR is a costly alternative. There are eopportunities for improvement:
+                                    <ul>
+                                        <li>Additional pre-processing to remove features leading to false positive, such as vessel tracks and oil slicks.</li>
+                                        <li>Alternative atmospheric correction routines that do not impact the NIR and SWIR bands used for plastic detection</li>
+                                        <li>Advancing the machine learning classification with novel techniques and more extensive and diverse training sets.</li>
+                                    </ul>
+                                </p>
+                                <p>A remaining challenge is to develop methods that estimate quantitatively marine debris, not only that it is present. Another challenge is how to detect microplastics, that form the bulk of plastic in the marine environment. Both of these challenges are possibly unsurmountable with current orbiting instruments, but future missions could provide the required spectral and spatial characteristics needed by litter detection algoithms.</p>
+                                <p>Whether to inform specification and design, provide a test environment for algorithm development, or act as a 'digital twin' to an operational instrument the availability of a generic, plugable, extensible workflow manager and model builder tailored for Earth Observaton processing is a long-term goal.</p>
+                                <p>As one of the foremost experts in marine litter detection and monitoring a primary objective is to provide end user products, as an on-demand service, combining detection from space with model predictions of likely source and destination.</p>
                             </span>
-                        </div>M*fh9Z3TG2Jk
+                        </div>
                     </div>
                 </div>
             </div>
+            <p>&nbsp;</p>
         </section>
 
         <section id="img_beach"></section>
@@ -458,42 +486,70 @@
                         <div id="contact">
                             <p class="mt-3">
                                 <span class="material-symbols-outlined">mail</span>
-                                <a href="mailto:enquiries@argans.co.uk">enquiries@argans.co.uk</a>
+                                <a href="mailto:enquiries@argans.co.uk">enquiries@argans.co.uk</a><br />
+                                <span class="material-symbols-outlined">mail</span>
+                                <a href="mailto://information@argans.eu">information@argans.eu</a>
                             </p>
                             <p class="mt-3">
                                 <span class="material-symbols-outlined">call</span>
-                                <a href="tel:+441751764298">+44(0)1751 764 298</a>
+                                <a href="tel:+441751764298">+44( 0)1751 764 298</a><br />
+                                <span class="material-symbols-outlined">call</span>
+                                <a href="tel:+33492967500">+33 (0)4 92 96 75 00</a>
                             </p>
                             <p class="mt-3">
                                 <span class="material-symbols-outlined">language</span>
                                 <a href="https://argans.co.uk">argans.co.uk</a>
                             </p>
                         </div>
+                        <div id="iso9001" class="mt-5">
+                            <p>ARGANS is an ISO9001 certified company</p>
+                            <img class="img-fluid" src="img/arg-ISO9001.png" />
+
+                        </div>
                     </div>
                     <div class="col-sm-4 footer-col">
                         <div>
                             <h1>Follow</h1>
+                            <ul class="social-buttons">
+                                <li>
+                                    <a href="https://facebook.com/Argans-Ltd-398626617605986/"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/ARGANS_Ltd"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/company/419849?trk=prof-exp-company-name"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/argans_ltd"><i class="fa fa-instagram"></i></a>
+                                </li>
+                            </ul>
                         </div>
-                        <div>
+                        <div class="mt-5">
                             <p class="mt-5">These projects were commissioned by the European Space Agency (ESA) unless otherwise attributed.</p>
                             <div class="logo">
-                                <img class="img-fluid" src="img/logo_ESA_white.png" alt="European Space Agency logo"/>
+                                <a href="esa.int" target="_blank"><img class="img-fluid" src="img/logo_ESA_white.png" alt="European Space Agency logo"/></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- <section id="bottom">
+            <p>&nbsp;</p>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
-                        <p>&copy; 2022 ARGANS Limited</p>
+                    <div class="col" id="bottombar" >
+                <ul>
+                    <li>&copy; 2022 ARGANS Limited</li>
+                    <li>Privacy | Disclaimer</li>
+                </ul>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+
+        <script>
+            AOS.init();
+        </script>
 
         <script type="text/javascript">
             let wave1 = document.getElementById('wave1');
@@ -533,6 +589,30 @@
                 }
             }
         </script>
+
+    <script type="text/javascript">
+        const sections = document.querySelectorAll('section');
+        const navli = document.querySelectorAll('nav .container ul li');
+
+        window.addEventListener('scroll', ()=> {
+            let current = '';
+            sections.forEach( section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if(pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            })
+
+            navli.forEach( li => {
+                li.classList.remove('active');
+                if(li.classList.contains('current')) {
+                    li.classList.add('active')
+                }
+            })
+        })
+    </script>
 
     </body>
 </html>
