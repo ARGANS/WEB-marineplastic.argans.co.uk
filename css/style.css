@@ -478,7 +478,7 @@ section#footer {
     padding: 5px 10px;
     margin-left: 10px;
 }
-.active {
+.selected {
     background-color: #a8e9ff;
     transition: 0.3 ease background-color;
 }
@@ -501,7 +501,7 @@ section#footer {
         font-size: 7vmax;
     }
     .menu-item {
-        font-size: 1.5vmax;
+        font-size: 1vmax;
     }
 }
 /* MOBILE PHONES */

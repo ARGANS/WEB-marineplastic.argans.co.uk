@@ -83,7 +83,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 px-3" data-aos="fade-up" data-aos-duration="3000">
-                        <p>1% of marine plastic is visible on the surface. The remaining 99% are less than 5mm, degrade slowly, are ubiqitous throughout the oceans.</p>
+                        <p>1% of marine plastic is visible on the surface. The remaining 99% are less than 5mm, degrade slowly, are ubiquitous throughout the oceans.</p>
                     </div>
                 </div>
             </div>
@@ -105,8 +105,8 @@
             <div class="logo-container">
                 <a href="https://argans.co.uk"><img class="logo-image" src="img/logo.png" alt="ARGANS logo"></a>
             </div>
-            <ul id="nav-list" class="container nav-menu">
-                <li class="active resmali menu-item"><a href="#resmali">RESMALI</a></li>
+            <ul id="nav-list" class="nav-menu">
+                <li class="selected resmali menu-item"><a href="#resmali">RESMALI</a></li>
                 <li class="geointml menu-item"><a href="#geointml">GeoInt ML</a></li>
                 <li class="eotrack menu-item"><a href="#eotrack">EOTrack Med</a></li>
                 <li class="wasp menu-item"><a href="#wasp">WASP</a></li>
@@ -196,7 +196,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="content mt-2" data-sec="geointml">
-                            <p>A 6-month feasibility study was commissioned under the Space for Smarter Government Program (SSGP) funded by the UK Space Agency (UKSA) to assess the capability of providing a service using public satellite data to routinely identify and monitor marine litter. Using the the discrete wavelengths detected by the Copernicus-2 MSI in the visible, <abbr title="Near Infra Red">NIR</abbr> and <abbr title="Short Wave Infrared">SWIR</abbr> a radiometric signature unique to floating ocean plastic and distinquishable from floating vegetation was identified, enabling the development of a baseline EO processor to detect marine litter targets.
+                            <p>A 6-month feasibility study was commissioned under the Space for Smarter Government Program (SSGP) funded by the UK Space Agency (UKSA) to assess the capability of providing a service using public satellite data to routinely identify and monitor marine litter. Using the the discrete wavelengths detected by the Copernicus-2 MSI in the visible, <abbr title="Near Infra Red">NIR</abbr> and <abbr title="Short Wave Infrared">SWIR</abbr> a radiometric signature unique to floating ocean plastic and distinguishable from floating vegetation was identified, enabling the development of a baseline EO processor to detect marine litter targets.
                             </p><p>
                                 <figure>
                                     <img class="figure-img img-fluid rounded" src="img/img_plastic04.png" alt="Floating plastic identified from Sentinel-2 image">
@@ -569,7 +569,7 @@
 
         <script type="text/javascript">
             var btn = document.getElementById("nav-toggle");
-            var nav = document.getElementById("nav-list")
+            var nav = document.getElementById("nav-list");
             btn.addEventListener('click', () => {nav.classList.toggle("active");});
         </script>
 
@@ -591,24 +591,25 @@
         </script>
 
     <script type="text/javascript">
-        const sections = document.querySelectorAll('section');
-        const navli = document.querySelectorAll('nav .container ul li');
+        const sections = document.querySelectorAll('.wrapper');
+        const navlinks = document.querySelectorAll('nav li');
 
         window.addEventListener('scroll', ()=> {
             let current = '';
             sections.forEach( section => {
+
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
 
-                if(pageYOffset >= sectionTop) {
+                if(pageYOffset >= (sectionTop - sectionHeight / 3)) {
                     current = section.getAttribute('id');
                 }
             })
 
-            navli.forEach( li => {
-                li.classList.remove('active');
-                if(li.classList.contains('current')) {
-                    li.classList.add('active')
+            navlinks.forEach( li => {
+                li.classList.remove('selected');
+                if(li.classList.contains(current)) {
+                    li.classList.add('selected')
                 }
             })
         })
