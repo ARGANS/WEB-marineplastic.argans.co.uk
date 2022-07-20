@@ -7,7 +7,8 @@ html, body {
     /*height: 100vh;*/
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 10vh;
+    scroll-behavior: smooth;
     background-color: black;
 }
 
@@ -30,6 +31,15 @@ a {
     text-decoration: none;
     padding: 2px 1px 0;
     font-style: italic;
+}
+a:visited {
+    color: #437A16;
+}
+a:focus {
+background: #BAE498;
+}
+a:hover {
+background: #CDFEAA;
 }
 .link a[href^="http"]::after,
 .link a[href^="https://"]::after {
@@ -481,9 +491,26 @@ section#footer {
 .selected {
     background-color: #a8e9ff;
     transition: 0.3 ease background-color;
+    border-radius: 50% / 25%;
 }
 .menu-item a {
     font-style: normal;
+}
+.menu-item a:hover {
+    background-color: inherit;
+
+}
+ul:hover li a{
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+ul li a:hover{
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+    text-decoration:n one;
+    color: inherit;
 }
 .bar {
     width: 20px;
@@ -527,6 +554,10 @@ section#footer {
         width: 100%;
         padding: 5px 0;
         text-align: center;
+    }
+    ul:hover li a{
+        opacity: 1;
+        filter: blur(0);
     }
     .menu-icon {
         display: block;

@@ -10,6 +10,7 @@
         <meta name="msapplication-navbutton-color" content="#00C0FF" />
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#00C0FF" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>ARGANS | Detecting & Monitoring Marine Plastics from Space</title>
         <meta name="author" content="Stephen Emsley" />
         <meta name="copyright" content="&copy; 2022 ARGANS Limited" />
@@ -38,7 +39,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css" rel="stylesheet">
         <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 
         <link rel="stylesheet" href="css/style.css" type="text/css" />
 
@@ -439,13 +440,12 @@
                 <div class="row">
                     <div class="col">
                         <h1>The Future</h1>
-                        <h2></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="content mt-2" data-sec="future">
-                            <p>Since RESMALI, in 2017, ARGANS has made advances in the knowledge and understanding of the problem of detecting the presence of marine litter from EO remote sensing satellites. Using currently operational low-cost technology, i.e. Copernicus Sentinel-2 MSI, which has neither optimal spatial nor spectral resolution, a litter processor has been developed capable of detecting marine litter accumulations, which has been verified and validated in the frame of the <a href="#eotrack">EOTrack Med<a>, <a href="#wasp">WASP</a> and <a href="bsplastic">Black Sea plastic</a> projects.</p>
+                            <p>Since RESMALI, in 2017, ARGANS has made advances in the knowledge and understanding of the problem of detecting the presence of marine litter from EO remote sensing satellites. Using currently operational low-cost technology, i.e. Copernicus Sentinel-2 MSI, which has neither optimal spatial nor spectral resolution, a litter processor has been developed capable of detecting marine litter accumulations, which has been verified and validated in the frame of the <a href="#eotrack">EOTrack Med<a>, <a href="#wasp">WASP</a> and <a href="#bsplastic">Black Sea plastic</a> projects.</p>
                             <p>Work has also progressed on developing and improving a processor capable of detecting terrestrial accumulations of litter, providing a machine learning approach with improved performance at classification.
                             <p>
                                 <button onclick="readMore('future')" class="button">
@@ -572,9 +572,18 @@
         </script>
 
         <script type="text/javascript">
-            var btn = document.getElementById("nav-toggle");
-            var nav = document.getElementById("nav-list");
-            btn.addEventListener('click', () => {nav.classList.toggle("active");});
+            const btn = document.getElementById('nav-toggle');
+            const nav = document.getElementById('nav-list');
+            btn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            const links = document.querySelectorAll('li.menu-item');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            };
         </script>
 
         <script type="text/javascript">
