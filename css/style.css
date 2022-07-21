@@ -7,7 +7,7 @@ html, body {
     /*height: 100vh;*/
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    scroll-padding-top: 10vh;
+    scroll-padding-top: 8vmax;
     scroll-behavior: smooth;
     background-color: black;
 }
@@ -69,6 +69,9 @@ section#landing {
     z-index: 50;
     width: fit-content;
     padding: 25px;
+}
+.logo a:hover {
+    background-color: inherit;
 }
 .title {
     position: absolute;
@@ -208,6 +211,7 @@ section.ocean {
 @media screen and (max-width: 768px) {
 	#img_beach {
 		background-attachment: inherit;
+        margin-top: 2rem;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -292,6 +296,9 @@ figure {
     font-size: 1.5vmax;
     font-style: normal;
 }
+.weblink a:hover {
+    background-color: inherit;
+}
 .weblink i {
     font-size: 3vmax !important;
 }
@@ -353,6 +360,10 @@ section#footer {
 }
 #footer p {
     font-size: 1vmax;
+}
+#footer a:hover {
+    background-color: inherit;
+    color: yellow;
 }
 #contact a {
     color: white;
@@ -428,13 +439,13 @@ section#footer {
 }
 #bottombar {
     position: relative;
-    padding-top: 1vh;;
+    padding: 1vh 5%;
     width: 100%;
-    height: 5vh;
+    height: 100%;
     background: #221f1f;
 }
 #bottombar ul::before {
-    content:"Privacy | Disclaimer";
+    content:"Privacy Policy  |  Disclaimer";
     margin: 1px auto 1px 1px;
     visibility: hidden;
     padding: 5px;
@@ -460,7 +471,32 @@ section#footer {
     text-align: center;
     margin-top: 0;
 }
-
+#bottombar a {
+    color: white;
+    font-style: normal;
+}
+#bottombar a:hover {
+    background-color: inherit;
+}
+.panel-default {
+    margin-top: 1vh;
+    padding: 1vh 10%;
+}
+.panel-default h2 {
+    font-size: 1.5vmax;
+    font-style: normal;
+    color: rgb(0,192,255);
+}
+.panel-default p {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.close {
+    position: relative;
+    padding-right: 10%;
+    text-align: right;
+    width: 100%;
+}
 /* NAVBAR */
 .navbar {
     position: sticky;
@@ -491,26 +527,15 @@ section#footer {
 .selected {
     background-color: #a8e9ff;
     transition: 0.3 ease background-color;
-    border-radius: 50% / 25%;
+    border-radius: 30px;;
 }
 .menu-item a {
     font-style: normal;
+    font-size: 1vmax;
 }
 .menu-item a:hover {
     background-color: inherit;
-
-}
-ul:hover li a{
-    opacity: 0.5;
-    filter: blur(1px);
-}
-
-ul li a:hover{
-    transform: scale(2);
-    opacity: 1;
-    filter: blur(0);
-    text-decoration:n one;
-    color: inherit;
+    font-style: italic;
 }
 .bar {
     width: 20px;
@@ -522,17 +547,10 @@ ul li a:hover{
     display: none;
 }
 
-/* WIDE MONITORS */
-@media only screen and (min-width: 82em) {
-    .intro h1 {
-        font-size: 7vmax;
-    }
-    .menu-item {
-        font-size: 1vmax;
-    }
-}
 /* MOBILE PHONES */
-@media only screen and (max-width: 62em) {
+@media only screen
+and (min-width: 320px)
+and (max-width: 1024px) {
     .navbar {
         flex-direction: column;
     }
@@ -555,9 +573,8 @@ ul li a:hover{
         padding: 5px 0;
         text-align: center;
     }
-    ul:hover li a{
-        opacity: 1;
-        filter: blur(0);
+    .menu-item a {
+        font-size: 2rem;
     }
     .menu-icon {
         display: block;
@@ -606,5 +623,45 @@ ul li a:hover{
     }
     #footer p {
         font-size: 2vmax;
+    }
+    #iso9001 {
+        margin-bottom: 2rem;
+    }
+    #bottombar ul {
+        flex-direction: column;
+    }
+    #bottombar li:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .panel-default h2 {
+        font-size: 2.5vmax;
+        font-style: normal;
+        color: rgb(0,192,255);
+    }
+    .panel-default p {
+        font-size: 16px;
+    }
+}
+
+/* MONITORS */
+@media only screen
+and (min-width: 1024px) {
+    .intro h1 {
+        font-size: 7vmax;
+    }
+    #footer p {
+        font-size: 1vmax;
+    }
+    .menu-item a {
+        font-style: normal;
+        font-size: 1.25vmax;
+    }
+}
+@media only screen
+and (min-width: 1024px)
+and (orientation: portrait) {
+    .menu-item a {
+        font-size: 1rem;
     }
 }
