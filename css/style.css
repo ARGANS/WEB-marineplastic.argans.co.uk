@@ -315,8 +315,8 @@ figure {
     padding-right: 5ch;
 }
 .content li {
-    font-size: 1 vmax;
-    color: rgb(0, 66, 66)
+    font-size: 1.5vmax;
+    color: black;
 }
 .comment {
     padding-left: 8ch;
@@ -445,7 +445,7 @@ section#footer {
     background: #221f1f;
 }
 #bottombar ul::before {
-    content:"Privacy Policy  |  Disclaimer";
+    content:"Privacy Policy  |  Disclaimer  | Copyright";
     margin: 1px auto 1px 1px;
     visibility: hidden;
     padding: 5px;
@@ -490,6 +490,13 @@ section#footer {
 .panel-default p {
     padding-left: 2%;
     padding-right: 2%;
+}
+.panel-default ul {
+    padding-left: 5%;
+}
+.panel-default li {
+    color: white;
+    font-size: 1vmax;
 }
 .close {
     position: relative;
