@@ -24,6 +24,7 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
+*.whl
 
 # ignore logfiles
 *.log

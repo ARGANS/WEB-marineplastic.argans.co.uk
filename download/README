@@ -1,0 +1,188 @@
+               MARINE LITTER
+      OPERATIONS PERFORMANCE SIMULATOR
+
+   __  __ _           ___  ____  ____ ___
+  |  \/  | |         / _ \|  _ \/ ___|_ _|
+  | |\/| | |   _____| | | | |_) \___ \| |
+  | |  | | |__|_____| |_| |  __/ ___) | |
+  |_|  |_|_____|     \___/|_|   |____/___|
+
+
+           © ARGANS Limited 2022
+
+THIS IS A DEMONSTRATOR FOR RESEARCH PURPOSES ONLY
+--------------------------------------------------
+
+SYSTEM REQUIREMENTS
+
+MacOS 10.9 Big Sur Python 3.10
+Ubuntu 18.04 LTS Bionic Beaver Python 3.9
+conda/venv/virtualenv (optional)
+
+The code is compiled Cython distributed as dynamic
+shared libraries, which may be incompatibile with
+Linux distributions or MacOS versions that differ
+from the build environment.
+
+We recommend you create a python virtual environment
+to install the dependencies. It is probably sufficient
+to choose python=3 to install the most recent version
+available for your OS environment.
+
+
+INSTALATION INSTRUCTIONS
+
+1. Download the software
+
+https://marineplastic.argans.co.uk/download
+
+    username: mlopsi
+    password: 0m3d*15P0-LM
+
+The software is packaged as a Python wheel.
+
+MacOS 10.9
+opsi-1.0.0-cp310-cp310-macosx_10_9_x86_64.whl
+
+Ubuntu 20.04 LTS
+
+2. Create a new virtual environment and install dependencies
+
+For conda the command:
+
+    $ conda create -n <name> -c conda-forge python=3 PySimpleGUI matplotlib pandas py6s tqdm typing pyfiglet
+
+Activate the envirnoment
+
+    $ conda activate <name>
+
+3. Create a folder and install the ML-OPSI package
+
+    $ mkdir <folder> ; cd <folder>
+    $ cp opsi-1.0.0-cp310-cp310-macosx_10_9_x86_64.whl .
+    $ pip install opsi-1.0.0-cp310-cp310-macosx_10_9_x86_64.whl
+
+All done!
+
+
+OPERATING INSTRUCTIONS
+
+The software has a command line interface (CLI) and a
+graphical user interface (GUI)
+
+    $ opsi -h
+    usage: opsi [-h] [-o OUTDIR] [-f CONFIG]
+
+    Optical Performance SImulator
+
+    options:
+    -h, --help                  show this help message and exit
+    -o OUTDIR, --outdir OUTDIR  path to output folder, [cwd]
+    -f CONFIG, --config CONFIG  processor configuration JSON file
+
+* Graphical User Interface
+
+    $ opsi
+
+Opens the GUI, which has a left panel to setup a simulation and
+a right panel to plot results.
+
+** Configuration
+
+    SGM Scene Generation Module
+    * select the types of litter from a multichoice menu
+    * enter the desired fraction [0-1] separated by commas
+    * select the water type from the dropdown menu
+
+    AM Atmosphere Module
+    * enable the module using the checkbox
+    * enter input parameters
+    * select aeosol type from dropdown menu
+
+    IDM Instrument Detection Module
+    * enable the module using the checkbox
+    * select the sensor type from the dropdown menu
+
+    The output folder can be selected using a filebrowser.
+    Since output filenames are fixed it is recommended that a new
+    folder is created for each run.
+
+    A menu option, also accessible via a right click context menu,
+    is to save the settings file as opsi.json, this is fixed and is
+    saved to the working directory by default. The file is checked
+    for correct format and values before saving. Errors are displayed
+    on the logging console.
+
+    A menu option, also accessible via a right click context emnu,
+    is to load a settings file. A file browser window enables selection.
+    The setting are checked on upload and errors notified on the
+    logging console.
+
+** Execution
+
+    Run the simulation using the GREEN button.
+
+    The configuration is checked for correctness before the program
+    is exeuted and any errors are notifed on the logging console.
+
+    Processing the full simulation on a 2.3GHz Quad-core i7 16GB RAM
+    would take about a minute. YMMV
+
+        WARNING the current version exhibits a bug when running
+        the atmosphere module, 6SV. This routine is processor
+        intensive and the Python Pool multiprocessing library is
+        used to split the load over 8 processed. While processing
+        the output to the logging console is locked and in this
+        version neither is there a progress bar on the GUI.
+
+    There IS a progress bar displayed on the terminal used to execute opsi.
+
+** Outputs
+
+    To plot a variable
+    * select it from the plotting drop down menu
+    * click PLOT
+    * optionally save a PNG in the <output folder>
+
+    To save outputs as CSV
+    * select the outputs from the multiselection menu
+    * click SAVE ALL
+
+    The outputs will be saved in the <output folder> along with the
+    opsi.json configuration file, and any saved plots.
+
+
+* Command Line Interface
+
+The command:
+
+    $ opsi -f opsi.json -o <output folder>
+
+with run a simulation, logging to stadout and to a file, opsi.log.
+
+
+
+TROUBLESHOOTING
+
+An issue has been observed with newly created virtual environments that
+the Py6S package installtion did not install the 6SV RTM. Re-installing
+fixed the issue.
+
+
+
+SUPPORT
+
+This is a demonstrator software and was never intended for distribution.
+We are contractually obliged to provide this software but it is made
+available 'as-is' and ARGANS have no obligation or current funding to
+supporting this software. As a snapshot of work in progress, a prototype,
+that has been useful to instruct and inform future work.
+
+
+
+EVOLUTION
+
+ML-OPSI as a configured instance of a generic, component-based, pluggable
+framework for developing Earth Observation models, simulation, workflows
+and data analytics will take years of development. The goal is a no-code
+GUI-based virtual laboratory
