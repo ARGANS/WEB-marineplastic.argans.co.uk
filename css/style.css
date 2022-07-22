@@ -237,7 +237,7 @@ figure {
 }
 .figure-caption {
     font-size: 1.5vmax;
-    color: rgb(148,55,77)
+    color: rgb(148,55,77);
 }
 
 /* PORTFOLIO */
@@ -556,6 +556,10 @@ section#footer {
 
 /* MOBILE PHONES */
 @media only screen
+and (min-width: 320px) {
+
+}
+@media only screen
 and (min-width: 320px)
 and (max-width: 979px) {
     .navbar {
@@ -602,6 +606,9 @@ and (max-width: 979px) {
     .intro p {
         font-size: 4vmax;
     }
+    .wrapper h2 {
+        font-size: 2.5vmax;
+    }
     .content p {
         font-size: 16px;
         text-align: left;
@@ -629,7 +636,10 @@ and (max-width: 979px) {
         font-size: 24px;
     }
     #footer p {
-        font-size: 2vmax;
+        font-size: 2.5vmax;
+    }
+    #footer h1 {
+        font-size: 5vmax;
     }
     #iso9001 {
         margin-bottom: 2rem;
@@ -649,8 +659,26 @@ and (max-width: 979px) {
     .panel-default p {
         font-size: 16px;
     }
+    .panel-default li {
+        font-size: 14px;
+    }
 }
-
+/* TABLETS */
+@media only screen
+and (min-width: 768px) {
+    #footer h1 {
+        font-size: 3vmax;
+    }
+    #footer p {
+        font-size: 1.25vmax;
+    }
+}
+@media only screen
+and (min-width: 979px) {
+    #footer p {
+        font-size: 2vmax;
+    }
+}
 /* MONITORS */
 @media only screen
 and (min-width: 1024px) {
