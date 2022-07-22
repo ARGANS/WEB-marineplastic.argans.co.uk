@@ -302,6 +302,15 @@ figure {
 .weblink i {
     font-size: 3vmax !important;
 }
+#reg_container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#download {
+    width: 33vw;
+    font-size: 3vw;
+}
 .content {
     display: flex;
     flex-direction: column;
@@ -534,7 +543,12 @@ section#footer {
 .selected {
     background-color: #a8e9ff;
     transition: 0.3 ease background-color;
-    border-radius: 30px;;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    box-shadow: 5px 5px 7px #888;
+    -webkit-box-shadow: 5px 5px 7px #888;
+    -moz-box-shadow: 5px 5px 7px #888;
 }
 .menu-item a {
     font-style: normal;
@@ -542,7 +556,7 @@ section#footer {
 }
 .menu-item a:hover {
     background-color: inherit;
-    font-style: italic;
+    color: black;
 }
 .bar {
     width: 20px;

@@ -431,8 +431,14 @@
                                 <p>A Mission Performance Simulator models the characteristics of the instrument, the orbiting platform and, for passive optical sensors, the propagation of light from target to acquisition, considering the effects of atmosphere and interaction with the optical and electronic components of the instrument, to simulate the expected signal and subsequent data package, which can be processed using retrieval algorithms as if from the real sensor.</p>
                                 <p>The baseline architecture ML-OPSI conforms to that described <a href="https://www.researchgate.net/publication/235699915_ARCHEO-E2E_A_Reference_Architecture_for_Earth_Observation_end-to-end_Mission_Performance_Simulators" target="_blank"> ARCHEO-E2E: A Reference Architecture for Earth Observation end-to-end Mission Performance Simulators (2012)</a>. The algorithm for generating BOA water leaving reflectance was based on work published by <a href="https://doi.org/10.1016/j.marpolbul.2017.11.011" target="_blank">Goddjin-Murphy <em>et al.</em> (2018)</a> and laboratory measurements of spectral signatures from various litter types gathered from <a href="https://doi.org/10.1016/j.jhazmat.2020.124290" target="_false">Garaba, S. <em>et al.</em> (2021)</a> and <a href="https://doi.org/10.4121/12896312.v2" target="_blank">Knaeps, E. <em>et al.</em> (2020)</a>.</p>
                                 <p>By providing a modelling &amp; simulation framework enabling researchers to build virtual experiments by combining pre-built, re-useable, building blocks within a low-code environment and thus, by democratization, reduce the barriers to entry for using the various sophisticated computational techniques available for investigating and understanding complex systems, like monitoring marine plastic from satellite.</p>
-                                <p>The ML-OPSI software is a downloadable Python wheel package, compiled for Linux Ubuntu 18.04 LTS or MacOS 12+. It is a demo, not intended as an operational system nor as an implementation of the generic, component-based, framework specified in the documentation.</p>
-                            </span>
+                                <div class="col">
+                                    <p>The ML-OPSI software is a downloadable Python wheel package, compiled for Linux Ubuntu 18.04 LTS or MacOS 12+. It is a demo, not intended as an operational system nor as an implementation of the generic, component-based, framework specified in the documentation.</p>
+                                    <p>ML-OPSI software is accessible under request. For that purpose, please, send an e-mail to the address revealed by clicking the button below. You will receive an automated reply providing download and installation instructions.</p>
+                                    <div id="reg_container">
+                                        <button id="download" type="button" class="btn btn-outline-success" onclick="decode('bWxvcHNpQGFyZ2Fucy5jby51awo=')">Click to Register</button>
+                                    </div>
+                                </div>
+                                </span>
                         </div>
                     </div>
                 </div>
@@ -709,6 +715,14 @@
             });
         </script>
 
+        <script>
+            function decode(encoded) {
+
+                var address = atob(encoded);
+                window.location.href = "mailto:" + address;
+
+            }
+        </script>
 
     </body>
 </html>
