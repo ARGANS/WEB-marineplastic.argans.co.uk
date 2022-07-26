@@ -1,0 +1,297 @@
+               MARINE LITTER
+      OPERATIONS PERFORMANCE SIMULATOR
+
+   __  __ _           ___  ____  ____ ___
+  |  \/  | |         / _ \|  _ \/ ___|_ _|
+  | |\/| | |   _____| | | | |_) \___ \| |
+  | |  | | |__|_____| |_| |  __/ ___) | |
+  |_|  |_|_____|     \___/|_|   |____/___|
+
+
+           © ARGANS Limited 2022
+
+THIS IS A DEMONSTRATOR FOR RESEARCH PURPOSES ONLY
+--------------------------------------------------
+
+SYSTEM REQUIREMENTS
+
+MacOS 10.9 Big Sur Python 3.10
+Ubuntu 18.04 LTS Bionic Beaver Python 3.9
+conda/venv/virtualenv (optional)
+
+The code is compiled Cython distributed as dynamic
+shared libraries, which may be incompatibile with
+Linux distributions or MacOS versions that differ
+from the build environment.
+
+We recommend you create a python virtual environment
+to install the dependencies. It is probably sufficient
+to choose python=3 to install the most recent version
+available for your OS environment.
+
+
+INSTALATION INSTRUCTIONS
+
+1. Download the software
+
+https://marineplastic.argans.co.uk/download
+
+    username: mlopsi
+    password: 0m3d*15P0-LM
+
+The software is packaged as a Python wheel.
+
+MacOS 10.9
+opsi-1.0.0-cp310-cp310-macosx_10_9_x86_64.whl
+
+Ubuntu 20.04 LTS
+opsi-1.0.0-cp310-cp310-linux_x86_64.whl
+
+
+2. Create a new virtual environment and install dependencies
+
+For conda the command:
+
+    $ conda create -n <name> -c conda-forge python=3 PySimpleGUI matplotlib pandas py6s tqdm typing pyfiglet pyglet
+
+Activate the envirnoment
+
+    $ conda activate <name>
+
+
+3. Create a folder and install the ML-OPSI package
+
+    $ mkdir <folder> ; cd <folder>
+    $ cp opsi-1.0.0-cp310-cp310-macosx_10_9_x86_64.whl .
+    $ pip install opsi-1.0.0-cp310-cp310-macosx_10_9_x86_64.whl
+
+All done!
+
+
+OPERATING INSTRUCTIONS
+
+The software has a command line interface (CLI) and a
+graphical user interface (GUI)
+
+    $ opsi -h
+    usage: opsi [-h] [-o OUTDIR] [-f CONFIG]
+
+    Optical Performance SImulator
+
+    options:
+    -h, --help                  show this help message and exit
+    -o OUTDIR, --outdir OUTDIR  path to output folder, [cwd]
+    -f CONFIG, --config CONFIG  processor configuration JSON file
+
+* Graphical User Interface
+
+    $ opsi
+
+Opens the GUI, which has a left panel to setup a simulation and
+a right panel to plot results.
+
+** Configuration
+
+    SGM Scene Generation Module
+    * select the types of litter from a multichoice menu
+    * enter the desired fraction [0-1] separated by commas
+    * select the water type from the dropdown menu
+
+    AM Atmosphere Module
+    * enable the module using the checkbox
+    * enter input parameters
+    * select aeosol type from dropdown menu
+
+    IDM Instrument Detection Module
+    * enable the module using the checkbox
+    * select the sensor type from the dropdown menu
+
+    The output folder can be selected using a filebrowser.
+    Since output filenames are fixed it is recommended that a new
+    folder is created for each run.
+
+    A menu option, also accessible via a right click context menu,
+    is to save the settings file as opsi.json, this is fixed and is
+    saved to the working directory by default. The file is checked
+    for correct format and values before saving. Errors are displayed
+    on the logging console.
+
+    A menu option, also accessible via a right click context emnu,
+    is to load a settings file. A file browser window enables selection.
+    The setting are checked on upload and errors notified on the
+    logging console.
+
+** Execution
+
+    Run the simulation using the GREEN button.
+
+    The configuration is checked for correctness before the program
+    is exeuted and any errors are notifed on the logging console.
+
+    Processing the full simulation on a 2.3GHz Quad-core i7 16GB RAM
+    would take about a minute. YMMV
+
+        WARNING the current version exhibits a bug when running
+        the atmosphere module, 6SV. This routine is processor
+        intensive and the Python Pool multiprocessing library is
+        used to split the load over 8 processed. While processing
+        the output to the logging console is locked and in this
+        version neither is there a progress bar on the GUI.
+
+    There IS a progress bar displayed on the terminal used to execute opsi.
+
+** Outputs
+
+    To plot a variable
+    * select it from the plotting drop down menu
+    * click PLOT
+    * optionally save a PNG in the <output folder>
+
+    To save outputs as CSV
+    * select the outputs from the multiselection menu
+    * click SAVE ALL
+
+    The outputs will be saved in the <output folder> along with the
+    opsi.json configuration file, and any saved plots.
+
+
+* Command Line Interface
+
+The command:
+
+    $ opsi -f opsi.json -o <output folder>
+
+with run a simulation, logging to stadout and to a file, opsi.log.
+
+
+
+TROUBLESHOOTING
+
+An issue has been observed with newly created virtual environments that
+the Py6S package installtion did not install the 6SV RTM. Re-installing
+fixed the issue.
+
+
+
+SUPPORT
+
+This is a demonstrator software and was never intended for distribution.
+We are contractually obliged to provide this software but it is made
+available 'as-is' and ARGANS have no obligation or current funding to
+supporting this software. As a snapshot of work in progress, a prototype,
+that has been useful to instruct and inform future work.
+
+
+
+EVOLUTION
+
+ML-OPSI as a configured instance of a generic, component-based, pluggable
+framework for developing Earth Observation models, simulation, workflows
+and data analytics will take years of development. The goal is a no-code
+GUI-based virtual workshop enabling scientists and analysts access to a
+toolbox of interchangeable building blocks and processing elements that
+can be combined to satisfy non-programmers to build complex computational
+systems. These systems could be end-to-end, multi-scale, simulations of a
+sensor - a 'digital twin' updated in real-time with telemetry and data from
+its operation, orbiting twim. It could be configured as a virtual lab to
+create and run experiments and test hypotheses and algorithms. The potential
+applications of an Earth Observation Modelling Environment (EOME) are many,
+but the path to realisation will be lengthy.
+
+This is why we made a start with ML-OPSI. A small step, and that is how
+lean software development progresses. From a light-weight prototype that
+questions our assumptions and refines our requirements.
+
+Collaboration will be vital to move forward. This phase in the development
+of an end-to-end marine litter detector has led us to consider a range of
+technologies that could be applied with scales ranging from modelling
+particle-photon interaction to mesoscale and gyral eddy-resolving ocean
+circulation models, and all scales between. A multi-disciplinary approach
+is advocated, integrating systems by interfacing rather than combination,
+likely including federated services and distributed architecture,
+
+ARGANS is seeking collaborators and funding opportunities to progress towards
+these aims. To make first contact
+
+                        email enquires@argans.co.uk
+
+
+
+LICENSE AGGREMENT
+
+The program is owned by ARGANS and is copyrighted and licensed, not sold.
+
+1. License
+
+Use of the Program
+
+ARGANS grants you a nonexclusive license to use the Program.
+
+You may 1) use the Program to the extent of authorizations you have
+acquired and 2) make, install and distribute copies to support the level
+of use authorized, providing you reproduce the copyright notice and any
+other legends of ownership on each copy, or partial copy, of the Program
+and that you provide a copy of this License Agreement for Non-Warranted
+Programs along with the distribution of each copy or partial copy of the
+Program.
+
+You will ensure that anyone who uses the Program does so only in compliance
+with the terms of this Agreement.
+
+You may not 1) use, copy, modify, or distribute the Program except as
+provided in this Agreement; 2) reverse assemble, reverse compile, or otherwise
+translate the Program except as specifically permitted by law without the
+possibility of contractual waiver; or 3) sublicense, rent, or lease the
+ Program.
+
+2. No Warranty
+
+SUBJECT TO ANY STATUTORY WARRANTIES WHICH CAN NOT BE EXCLUDED, ARGANS
+MAKES NO WARRANTIES OR CONDITIONS EITHER EXPRESS OR IMPLIED, INCLUDING
+WITHOUT LIMITATION, THE WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING
+THE PROGRAM OR TECHNICAL SUPPORT, IF ANY.
+
+The exclusion also applies to any of ARGANS's subcontractors, suppliers, or
+program developers (collectively called "Suppliers").
+
+3. Limitation of Liability
+
+NEITHER ARGANS NOR ITS SUPPLIERS WILL BE LIABLE FOR ANY DIRECT OR INDIRECT
+DAMAGES, INCLUDING WITHOUT LIMITATION, LOST PROFITS, LOST SAVINGS, OR ANY
+INCIDENTAL, SPECIAL, OR OTHER ECONOMIC CONSEQUENTIAL DAMAGES, EVEN IF ARGANS
+IS INFORMED OF THEIR POSSIBILITY. SOME JURISDICTIONS DO NOT ALLOW THE
+EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE
+ABOVE EXCLUSION OR LIMITATION MAY NOT APPLY TO YOU.
+
+4. General
+
+Nothing in this Agreement affects any statutory rights of consumers that
+cannot be waived or limited by contract.
+
+ARGANS may terminate your license if you fail to comply with the terms of
+this Agreement. If ARGANS does so, you must immediately destroy the Program
+and all copies you made of it.
+
+You agree to comply with applicable export laws and regulations.
+
+Neither you nor ARGANS is responsible for failure to fulfill any obligations
+due to causes beyond its control.
+
+ARGANS does not provide program services or technical support, unless ARGANS
+specifies otherwise.
+
+
+DISCLAIMER. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+CONTRIBUTORS "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+SME/ARG 220722
