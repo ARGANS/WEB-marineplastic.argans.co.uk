@@ -358,7 +358,16 @@ figure {
     height:      75px;
     margin-top: -75px;
     visibility: hidden;
-  }
+}
+.attribution {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.attribution a:hover {
+    background-color: inherit;
+}
 /* FOOTER */
 section#footer {
     position: relative;
@@ -475,6 +484,9 @@ section#footer {
     margin: 1px;
     padding: 5px;
     color: #fff;
+}
+#bottombar img {
+    height: 20%;
 }
 #bottombar p {
     text-align: center;
